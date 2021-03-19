@@ -1,0 +1,74 @@
+.budget{
+    padding:10px;
+    &__pie{
+        margin:auto;
+        margin-top:50px;
+        text-align: center;
+    }
+    &__heading{
+        font-weight: 800;
+        font-size: 14px;
+        border-bottom: 1px solid #dedede;
+        padding-bottom:10px;
+        text-align: center;
+    }
+    &__cards{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        .moneyIn{
+            display:grid;
+            grid-template-columns: 30px 1fr;
+            width:125px; 
+            align-items: center;
+            padding:0px 5px;
+            border: 1px solid #dedede;
+            border-radius: 8px;
+            margin:10px 0px;
+            height:50px;
+            &__icon{
+                width:25px;
+                height:25px;
+                opacity:1;
+                background-color: rgb(1, 218, 1);
+                border-radius: 50%;
+                display: grid;
+                place-content: center;
+                transform: translateY(-7px);
+            }
+            &__message{
+    
+                p{
+                    line-height: 0;
+                    font-size: 12px;
+                    transform: translateY(-20px);
+                    color:#a39797;
+                }
+                h6{
+                    line-height: 0;
+                    font-size: 12px;
+                    transform: translateY(-8px);
+                }
+            }
+        }
+    }
+    .nobudget__heading{
+        text-align: center;
+        font-size: 18px;
+        line-height: 0;
+        padding-top:-60px;
+    }
+    .nobudget__detail{
+        padding:20px;
+        font-size: 14px;
+        text-align: center;
+        transform: translateY(-30px);
+        
+    }
+   
+}
+
+.budget__main{
+    height:calc(100vh - 80px);
+    overflow-y: scroll;
+}

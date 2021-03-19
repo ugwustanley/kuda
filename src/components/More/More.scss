@@ -1,0 +1,19 @@
+.more{
+    padding:10px;
+    padding-bottom: 100px;
+    
+     &__main{
+       @media(min-width:400px){
+        height:calc(100vh - 100px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+       }
+     }
+    &__heading{
+        font-weight: 800;
+        font-size: 14px;
+        border-bottom: 1px solid #dedede;
+        padding-bottom:10px;
+        text-align: center;  
+    }
+}
