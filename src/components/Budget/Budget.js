@@ -1,43 +1,45 @@
 import React from 'react'
-import {ChartPieSlice , Plus , Copy , MinusCircle } from 'phosphor-react'
+import {ChartPieSlice,Car , Spinner , Plus, MagnifyingGlass , Copy , MinusCircle, Wrench } from 'phosphor-react'
 import './Budget.scss'
 
 const Budget = () => {
+
+ //   border:"2px dashed #444444",
     return (
         <div className="budget">
-            <div className="budget__main">
-           <h5 className="budget__heading">Budget</h5>
+         <div className="budget__main">
+           <h5 className="budget__heading">Autorand</h5>
            <div className="budget__cards">
 
            <div className="moneyIn">
-                    <div className="moneyIn__icon" style={{background:"#26fdc7"}}> <Plus color="#fff" size={20} /></div>
+                    <div className="moneyIn__icon" style={{background:"#301a96"}}> <Plus color="#fff" size={20} /></div>
                     <div className="moneyIn__message">
-                       <h6 style={{color:"#26fdc7"}}>N0.00</h6>
-                        <p>Money In</p>
+                       <h6 style={{color:"#301a96"}}>N0.00</h6>
+                        <p>Add Vehicle</p>
                     </div> 
             </div>
 
             <div className="moneyIn" style={{justifySelf:"flex-end"}}>
-                    <div className="moneyIn__icon" style={{background:"red"}}> <MinusCircle color="#fff" size={20} /></div>
+                    <div className="moneyIn__icon" style={{background:"red"}}> <Wrench color="#fff" size={20} /></div>
                     <div className="moneyIn__message">
                        <h6 style={{color:"red"}}>N0.00</h6>
-                        <p>Money Out</p>
+                        <p>Repair Expenses</p>
                     </div> 
             </div>
 
             <div className="moneyIn">
-                    <div className="moneyIn__icon" style={{background:"rgb(1, 218, 1)"}}> <Copy color="#fff" size={20} /></div>
+                    <div className="moneyIn__icon" style={{background:"#26fdc7"}}> <MagnifyingGlass color="#fff" size={20} /></div>
                     <div className="moneyIn__message">
-                       <h6 style={{color:"rgb(1, 218, 1)"}}>N0.00</h6>
-                        <p>Balance</p>
+                       <h6 style={{color:"#26fdc7"}}>N0.00</h6>
+                        <p>Search Mechanics</p>
                     </div> 
             </div>
 
-            <div className="moneyIn" style={{border:"2px dashed #444444", justifySelf:"flex-end"}}>
-                    <div className="moneyIn__icon" style={{background:"lightgray"}}> <ChartPieSlice color="#444444" size={20} /></div>
+            <div className="moneyIn" style={{ justifySelf:"flex-end"}}>
+                    <div className="moneyIn__icon" style={{background:"lightgray"}}> <Car color="#444444" size={20} /></div>
                     <div className="moneyIn__message">
-                       <h6 style={{color:""}}>No Budget</h6>
-                        <p>Create a Budget</p>
+                       <h6 style={{color:""}}>Routine Service</h6>
+                        <p>Create a Plan</p>
                     </div> 
             </div>
 
@@ -45,10 +47,10 @@ const Budget = () => {
            </div>
            
            <div className="budget__pie">
-           <ChartPieSlice size={100} />
+           <Car size={60} />
            </div>
-            <h6 className="nobudget__heading">Nothing to see here</h6>
-            <p className="nobudget__detail">it appears you have performed no transaction in this period. Start spending some money and we will let you know how you have spent it.</p>
+            <h6 className="nobudget__heading">Autorand</h6>
+            <p className="nobudget__detail">Create routine and get alerts for your next due date.</p>
        </div>
         </div>
     )

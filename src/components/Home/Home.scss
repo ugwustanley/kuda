@@ -2,80 +2,150 @@
     width:calc(100% - 30px);
     padding-left:10px;
     padding-right: 20px;
-   
+ 
+    animation: show__home .1s ease-in 1;
+    @keyframes show__home {
+        from{
+           transform:scale(.95);
+        }
+        to{
+            transform: scale(1);
+        }
+    }
+    a{
+        text-decoration: none;
+        color:inherit !important;
+    }
     .intro{
         display: grid;
-        grid-template-columns: 50px 1fr 1fr 30px;
+        grid-template-columns:1fr  30px;
         grid-template-rows: 70px;
         align-items: center;
         place-content: center left;
-       
+        a{
+            text-decoration: none;
+        }
+        .status{
+            width:15px;
+            height: 15px;
+            text-align: left;
+            transform: translateX(-2px) translateY(3px);
+            z-index:1;
+        }
         .profile{
             width:50px;
             height:50px;
             border-radius: 50%;
             object-position: top center;
             object-fit: cover;
+            display: none;
             
         }
         &__message{
-            padding-left:5px;
-            font-weight: 900;
-            font-size: 15px;
+           transform: translateY(20px);
+            h4{
+                display: inline;
+                padding-left:5px;
+                font-weight: 900;
+                font-size: 15px;
+                margin-right:0px;
+                z-index:2;
+            }
+            h6{
+                padding-left:5px;
+                margin-top:10px;
+                background-color: green;
+                line-height:0px;
+                font-size: 12px;
+                opacity: .4;
+            }
             
         }
         .add__money{
             text-align: end;
             font-size: 13px;
-            color:#19005b;
-            transform: translateX(10px);
+            font-weight: 800;
+            transform: translateX(10px) translateY(7px);
         }
         .add__circle{
             width:20px;
             height:20px;
             border-radius: 50%;
-            border: 4px solid #19005b;
+            border:2px solid #301a96;
+            color: #301a96;
             display:inline-block;
             transform: translateX(13px);
+            /* &::before{
+                content:"";
+                position:absolute;
+                width:100%;
+                height:100%;
+                bottom:-13%;
+                left:-11%;
+                background-color: transparent;
+                border:2px solid #301a96;
+                transform: scale(1);
+                border-radius: 50%;
+                animation: wave 1s ease-out infinite;
+                @keyframes wave {
+                    0%{
+                        transform: scale(1);
+                        opacity: .8;
+                    }
+                    50%{
+                        transform: scale(1.1);
+                        border: 5px solid #301a96;
+                        opacity: .1;
+                    }
+                    100%{
+                        opacity: .1;
+                    }
+                }
+            }*/
         }
         
 
     }
    .card_info{
+       margin-top:20px;
        width:100%;
-       height:180px;
-       background: #19005b;
+       height:160px;
+       background: #301a96;
        border-radius: 10px;
        text-align: center;
        padding: 0 5px;
        color:#f1f0f0;
        h4{
            padding-top:10px;
-           font-size: 14px;
+           font-size: 11px;
+           font-weight: 800;
        }
        h1{
            line-height: 10px;
-           font-size: 48px;
+           font-size: 45px;
        }
        .card__actions{
            display:flex;
            justify-content:space-around;
            font-size: 11px;
-           margin-top:40px;
+           margin-top:35px;
            .iconbox{
                width:35px;
                height:30px;
                display: grid;
                place-content: center;
                border-radius: 7px;
-               background:#e3dfe8;
-               color:#19005b;
+               background:rgb(223, 222, 250);
+               color:#301a96;
                text-align: center;
                margin:auto;
            }
+           .bonus , .cart , .money{
+               width:20px;
+           }
            p{
                line-height: 0px;
-               
+               font-weight: 700;
            }
           
        }

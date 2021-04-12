@@ -1,15 +1,19 @@
 import React from 'react'
 import './Cards.scss'
-import Kuda3 from './images/kuda3.png'
+//import Kuda3 from './images/EV9QJx7XsAAMWkS_1.jpg'
 import LinkCard from '../LinkCard/LinkCard'
-import {CreditCard} from 'phosphor-react'
+import {CreditCard , FirstAid} from 'phosphor-react'
+
 const Cards = () => {
     return (
         <div className="cards">
-            <h5 className="cards__heading">Card</h5>
-            <img  className="cards__card" src={Kuda3} alt="Kuda card"></img>
-            <p className="cards__message">Get a free physical or virtual debit card</p>
-            <LinkCard style={{display:"none"}} className="cards__link"   IconOne={CreditCard} Heading="Request A Card" ParaG="We'll send it to you wherever you are" />
+             {/*   <img  className="cards__card" src={Kuda3} alt="Kuda card"></img>
+             <p className="cards__message">Get a free physical or virtual debit card</p>*/}
+             <h5 className="cards__heading">Bsure</h5>
+             <div className="cards__link">
+             <LinkCard style={{display:"none"}} className="cards__link"   IconOne={FirstAid} Heading="Pay Later Healthcare" ParaG="(Coming Soon)" />
+             </div>
+           
         </div>
     )
 }

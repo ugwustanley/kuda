@@ -1,0 +1,85 @@
+.paypage{
+    padding:0px 10px;
+    padding-bottom:20px;
+    background: #f7f7f7;
+    min-height:100vh;
+    a{
+        text-decoration:none;
+        color:inherit;
+    }
+    .add{
+           width:50px;
+           height:50px;
+           background: #311a96;
+           display:grid;
+           place-content: center;
+           border-radius: 50%;
+           position: fixed;
+           bottom:10px;
+           left:calc(50% - 25px);
+           box-shadow: 1px 1px 5px 2px rgb(226, 226, 226);
+           animation: float 1s ease-in-out infinite;
+           @keyframes float {
+               0%{
+                   transform: translateY(-5px);
+               }
+               50%{
+                   transform: translateY(0px);
+               }
+               100%{
+                   transform: translateY(-5px);
+               }
+           }
+    }
+    &__heading{
+        display:grid;
+        grid-template-columns: repeat(1fr , 3);
+        align-items: center;
+        border-bottom: 1px solid #dedede;
+        padding-bottom:10px;
+        margin-bottom:50px;
+        height:40px;
+        h5{
+            grid-column: 2/3;
+            font-size: 14px;
+            margin-right:20px;
+        }
+        div{
+            grid-column: 1/2;
+            cursor: pointer;
+            margin-right:auto;
+        }
+    }
+   .bonus{
+       border-radius:8px;
+       background-color:#fff;
+       display:grid;
+       grid-template-columns:2fr 2fr 1fr;
+       padding:10px;
+       align-items: center;
+       margin:20px 0px;
+       button{
+           border:none;
+           outline:none;
+           background: #301a96;
+           color:#fff;
+           padding:10px 20px;
+       } 
+       p{
+           text-align: left;
+           font-weight: 600;
+           font-size: 14px;
+           color:#301a96;
+       }
+       h5{
+           text-align: right;
+           padding-right:20px;
+           font-size: 12px;
+           margin:0px;
+           color:#444;
+       }
+   }
+   
+
+    
+}

@@ -1,0 +1,50 @@
+.notification{
+    padding:10px;
+    animation: show__notification .1s ease-in 1;
+    @keyframes show__notification{
+        from{
+           transform:translateX(30px);
+        }
+        to{
+            transform: translateX(0px);
+        }
+    }
+    &__heading{
+        display:grid;
+        grid-template-columns: repeat(1fr , 3);
+        align-items: center;
+        border-bottom: 1px solid #dedede;
+        padding-bottom:10px;
+        margin-bottom:50px;
+        height:40px;
+        h5{
+            grid-column: 2/3;
+            font-size: 14px;
+            margin-right:20px;
+        }
+        div{
+            grid-column: 1/2;
+            cursor: pointer;
+            margin-right:auto;
+        }
+    }
+    &__message{
+        display:grid;  
+        align-items: center;
+        border-bottom: 1px solid #dedede;     
+        margin-top:30px;
+        margin-bottom: 40px;
+        h5{
+              font-size: 14px;
+              line-height: 0px;
+              margin-top: 0px;
+        }
+        p{
+            font-size: 13px;
+            margin-top: -7px;
+        }
+    }
+    &__day{
+        color:#cfcfcf;
+    }
+}

@@ -10,25 +10,32 @@
     grid-template-columns: 50px  1fr 70px;
     align-items: center;
     border-bottom: 1px solid #dedede;
-    .recordsIcon__container{
+     /*.recordsIcon__container{
         width:30px;
         height:30px;
         border-radius: 50%;
         background:coral;
         display:grid;
         place-content: center;
+    }*/
+    .recordsIcon__container{
+        margin-top:5px;
     }
     &__name{
-        font-size: 14px;
+        font-size: 13px;
+        font-weight: 800;
+        
     }
     &__time{
         line-height: 0px;
+        margin-top: -8px;
         font-size: 11px;
         color:#d3d1d1;
     }
     &__amount{
-        color:rgb(0, 252, 97);
-        font-size: 14px;
+        color:rgb(3, 189, 3);
+        font-size: 12px;
+        text-align: right;
         font-weight: 600;
     }
    }

@@ -3,7 +3,7 @@
   height:100vh;
   padding:0;
   margin:0;
-  
+  box-sizing: border-box;
   background-color:#492f70;
   background:#444444;
   
@@ -11,5 +11,7 @@
 @media(max-width: 400px){
  .app{
   background:#fff;
+  width:100%;
+  overflow-x: hidden;
  }
 }

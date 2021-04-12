@@ -1,13 +1,25 @@
 .payments{
     padding:10px;
     padding-bottom:100px;
-    
-    
+    animation: show__payments .1s ease-in 1;
+    @keyframes show__payments {
+        from{
+           transform:scale(1) translateX(40px);
+        }
+        to{
+            transform: scale(1) translateX(0px);
+        }
+    }
+    a{
+        text-decoration: none;
+        color:inherit;
+    }
     &__links{
       
         @media(min-width:400px){
-            height: calc(100vh - 200px);
+            height: calc(100vh - 300px);
             overflow-y:scroll;
+            overflow-x:hidden;
         }
     }
     &__heading{
@@ -20,8 +32,9 @@
     &__friends{
         display:grid;
         grid-template-columns: 1fr 70px;
-        border: 1px solid #dedede;
-        box-shadow: 0px 1px 2px #dedede;
+        border-top: .5px solid rgba(0,0,0,0.1);
+        border-left: .5px solid rgba(0,0,0,0.1);
+        box-shadow: 1px 2px 5px -2px rgba(0,0,0,0.3);
         border-radius: 5px;
         align-items: center;
         padding:4px 10px;
@@ -41,11 +54,12 @@
         }
     }
     button{
-        background-color: #492f70;
+        background-color:#301a96  ;
         color:#fff;
         padding: 5px 0px;
         font-size: 14px;
         border:none;
         border-radius: 5px;
+        /* #41d546d3 #492f70*/
     }
 }
