@@ -14,7 +14,8 @@ const Login = () => {
             <input type="password" name="" id="password" className="password" />
             <input  name="Submit" value="Login" type="submit" id="submit" className="submit" />
         </form>
-        <p className="to_signup">Don't yet have an account with us? <Link to="/signup"><b>Sign Up</b></Link></p>
+        <p className="to_signup">New user? <Link to="/signup"><b>Sign Up</b></Link></p>
+        <p className="forgot__password">Forgot password?</p>
         </div> 
     )
 }

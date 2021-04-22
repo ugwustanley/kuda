@@ -2,6 +2,9 @@
     padding:10px;
     height:calc(100vh - 320px);
     animation: show__auto .1s ease-in 1;
+    a{
+        text-decoration: none;
+    }
     @keyframes show__auto {
         from{
             transform:scale(1) translateX(40px);

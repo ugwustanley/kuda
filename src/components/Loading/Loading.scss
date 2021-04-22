@@ -1,0 +1,51 @@
+.loading{
+    height:100vh;
+    &__heading{
+        display:grid;
+        grid-template-columns: repeat(1fr , 3);
+        align-items: center;
+        border-bottom: 1px solid #dedede;
+        padding-bottom:10px;
+        margin-bottom:50px;
+        height:40px;
+        h5{
+            grid-column: 2/3;
+            font-size: 14px;
+            margin-right:20px;
+        }
+        div{
+            grid-column: 1/2;
+            cursor: pointer;
+            margin-right:auto;
+        }
+    }
+    .animation{
+        height:calc( 100vh - 250px);
+        display: grid;
+        place-content: center;
+        .ring{
+            width:50px;
+            height:50px;
+            border-radius: 50%;
+            border:3px solid lightgray;
+            border-left: 3px solid #301a96;
+            animation: roll .71s ease-in infinite;
+            @keyframes roll {
+                0%{
+                    transform: rotate(0deg);
+                }
+                25%{
+                    transform: rotate(120deg) scale(.8);
+                }
+                75%{
+                    transform: rotate(120deg) scale(1);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+                
+            }
+        }
+    }
+   
+}

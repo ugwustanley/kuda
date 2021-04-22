@@ -1,4 +1,4 @@
-.request{
+.Request{
     padding:0px 10px;
     &__heading{
         display:grid;
@@ -39,6 +39,9 @@
             border-radius: 8px;
             padding:0px 10px;
             outline: none;
+        }
+        .fail{
+            border:.1px solid rgb(253, 213, 213);
         }
         .save{
             display:block;

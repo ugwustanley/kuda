@@ -35,110 +35,138 @@ const Shop = () => {
              </div>
 
              <div className="shop__categories">
+               <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
                          <img src={Hotel}></img>
                       </div>
                       <p>Hotels & Lodges</p>
                   </div>
-
+                  </Link>
+                  <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
                         <img style={{transform:"scale(1.4)"}} src={Vehicle}></img>
                       </div>
                       <p>Automobiles</p>
                   </div>
+                  </Link>
 
+                  <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scale(1.4)"}} src={House}></img>
                       </div>
                       <p>Real estate</p>
                   </div>
-
+                  </Link>
+                  <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scale(2)"}} src={Phone}></img>
                       </div>
                       <p>Mobile Phones & Tablets</p>
                   </div>
+                  </Link>
 
+                  <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scale(1.2)"}} src={Laptop}></img>
                       </div>
                       <p>Electronics</p>
                   </div>
+                  </Link>
 
+                  <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
                         <img src={Chair}></img>
                       </div>
                       <p>Furniture & Home appliances</p>
                   </div>
+                  </Link>
 
+                  <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
                         <img src={Beauty}></img>
                       </div>
                       <p>Health & Beauty</p>
                   </div>
+                  </Link>
 
+                  <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scale(.9)"}} src={Dress}></img>
                       </div>
                       <p>Fashion</p>
                   </div>
+                  </Link>
 
+                  <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scale(1.1)"}} src={Sports}></img>
                       </div>
                       <p>Arts, Books & Digital content</p>
                   </div>
-
+                  </Link>
+  
+                  <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scale(1.2)"}} src={Transport}></img>
                       </div>
                       <p>Transport & Logistics</p>
                   </div>
+                  </Link>
 
+                  <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
                         <img src={Services}></img>
                       </div>
                       <p>Services</p>
                   </div>
+                  </Link>
 
+                  <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scale(1.2) translateY(5px)"}} src={Jobs}></img>
                       </div>
                       <p>Shows & Entertainment</p>
                   </div>
+                  </Link>
 
+                  <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
                         <img src={Babies}></img>
                       </div>
                       <p>Babies & Kids</p>
                   </div>
+                  </Link>
 
+                  <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scale(1.4)"}} src={Pets}></img>
                       </div>
                       <p>Animals & Pets</p>
                   </div>
+                  </Link>
 
+                  <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
                         <img src={Food}></img>
                       </div>
                       <p>Agriculture & Food</p>
                   </div>
+                  </Link>
                   
 
              </div>

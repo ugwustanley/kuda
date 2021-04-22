@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import {useHistory , Link} from 'react-router-dom'
+import Naira from 'react-naira'
 import {CaretLeft , Trophy, Users} from 'phosphor-react'
 import Badge from './images/rewards.png'
 import Badge4 from './images/bonus2.png'
@@ -23,30 +24,30 @@ const Bonuses= () => {
              <div className="bonus">
                  <img src={Badge}></img>
                  <p>Referral Bonus</p>
-                 <h5>00:00</h5>
+                 <h5><Naira>0</Naira></h5>
              </div>
              <div className="bonus">    
                  <img className="badge2" src={Badge2}></img>
                  <p>Shopping Cash Back</p>
-                 <h5>00:00</h5>    
+                 <h5><Naira>0</Naira></h5>    
              </div>
 
              <div className="bonus">
                  <img className="badge2" src={Badge4}></img>
                  <p>Withdrawn Bonus</p>
-                 <h5>00:00</h5>
+                 <h5><Naira>0</Naira></h5>
              </div>
 
              <div className="bonus">
                  <img className="badge3" src={Badge3}></img>
                  <p>Available Bonus</p>
-                 <h5>00:00</h5>
+                 <h5><Naira>0</Naira></h5>
              </div>
 
              <div className="bonus">
                  <img className="badge2" src={Badge5}></img>
                  <p>Total Bonus</p>
-                 <h5>00:00</h5>
+                 <h5><Naira>0</Naira></h5>
              </div>
             
            

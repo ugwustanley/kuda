@@ -6,6 +6,7 @@ import Bonus from './images/34654647-money-bag-bonus-icon_1.jpg'
 import Money2 from './images/money2.png'
 import {PlusCircle, Bank , Bell, ShoppingCart, Money , CurrencyDollar, Handshake} from 'phosphor-react'
 import {Link} from 'react-router-dom'
+import Naira from 'react-naira'
 import Records from '../Records/Records'
 import './Home.scss'
 // DotsNine, Lifebuoy , Copy , Notepad 
@@ -43,7 +44,7 @@ const Home = () => {
                   <h4>$mobme</h4> 
                   </Link>
                   <Link to="/balance">
-                  <h1>N0.00</h1>
+                  <h1><Naira>0</Naira></h1>
                   </Link>
                  <div className="card__actions">
                  <div className="">

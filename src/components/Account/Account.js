@@ -56,13 +56,21 @@ const Account = () => {
             <div className="growth group">
                <h2>Growth</h2>
                <div className="link">
+                   <Link to="/transaction">
                     <p>Transactions</p>
+                    </Link>
                     <div className="arrow-right">
+                        <Link to="/transaction">
                        <CaretRight size={20} weight="bold" />
+                       </Link>
                     </div>
+                    <Link to="/vendor">
                     <p>Vendor Account</p>
+                    </Link>
                    <div className="arrow-right">
+                       <Link to="/vendor">
                       <CaretRight size={20} weight="bold" />
+                      </Link>
                    </div>
                </div>
             </div>

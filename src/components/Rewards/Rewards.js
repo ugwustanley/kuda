@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import Naira from 'react-naira'
 import {useHistory , Link} from 'react-router-dom'
 import {CaretLeft , Trophy, Users} from 'phosphor-react'
 import Reward from './images/reward3-unscreen.gif'
@@ -28,7 +29,7 @@ const Rewards= () => {
                 <h5>Referral Earnings</h5>
             </div>
 
-            <p className="rewards__head">Receive rewards of up to 1,000 when you refer your friends</p>
+            <p className="rewards__head">Receive rewards of up to <Naira>1000</Naira> when you refer your friends</p>
             
             <div className="rewards__invite">
                  <Users size={48} />

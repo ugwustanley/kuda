@@ -14,7 +14,7 @@ const Vendor = () => {
                  </div>
                 <h5>Vendor Account</h5>
             </div>
-            <h5 className="Vendor__header">Create Shop</h5>
+      
             <form onSubmit={(e) => e.preventDefault()}>
                  <label for="Phone">Vendor Name</label>
                  <input name="Phone" type="text" defaultValue="" id="Phone" class="Phone"></input>
@@ -22,7 +22,10 @@ const Vendor = () => {
                  <label for="amount">Vendor Location</label>
                  <input name="amount" type="text" defaultValue="" id="amount" class="amount"></input>
 
-                 <input name="save" type="submit" value="Create Shop" id="save" class="save"></input>
+                 <label for="amount">Business Phone number</label>
+                 <input name="amount" type="text" defaultValue="" id="amount" class="amount"></input>
+
+                 <input name="save" type="submit" value="Create" id="save" class="save"></input>
             </form>
 
    

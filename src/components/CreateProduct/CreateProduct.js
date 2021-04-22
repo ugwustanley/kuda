@@ -16,17 +16,17 @@ const CreateProduct = () => {
                 <div onClick={history.goBack} >               
                         <CaretLeft size={20} weight="bold" />           
                  </div>
-                <h5>Create Product</h5>
+                <h5>Create Offer</h5>
             </div>
 
             <form className="form" onSubmit={(e) => e.preventDefault()}>
                 
-                 <input name="name" type="text" defaultValue="" id="name" class="name" placeholder="Product name" />
+                 <input name="name" type="text" defaultValue="" id="name" class="name" placeholder="Offer name" />
 
                 
                
 
-                  <textarea className="desc" placeholder="Product description" >
+                  <textarea className="desc" placeholder="Offer description" >
 
                   </textarea>
                  

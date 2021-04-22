@@ -29,11 +29,10 @@ const Recurr = () => {
                 <h5>Recurring Payment</h5>
             </div>
             <form onSubmit={(e) => e.preventDefault()}>
-                 <label for="Phone">Phone number/$Mobme</label>
+                 <label for="Phone">Account number/$Mobme handle</label>
                  <input name="Phone" type="text" defaultValue="" id="Phone" class="Phone"></input>
 
-                 <label for="amount">Amount</label>
-                 <input name="amount" type="tel" defaultValue="" id="amount" class="amount"></input>
+              
                   
                  
 
@@ -49,6 +48,11 @@ const Recurr = () => {
                  <div className="dropdown">
                    <Dropdown options={option1} value={defaultOption1}  menuClassName='dropdown__menu' controlClassName='dropdown__box'  />    
                  </div>
+
+                 <label for="amount">Amount per cycle</label>
+                 <input name="amount" type="tel" defaultValue="" id="amount" class="amount"></input>
+                 <label for="amount">Total Amount</label>
+                 <input name="amount" type="tel" defaultValue="" id="amount" class="amount"></input>
                  <label for="date">Commencement Date</label>
                  <input name="date"   type="date" defaultValue="" id="date" class="date"></input>
 

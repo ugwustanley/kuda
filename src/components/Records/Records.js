@@ -1,4 +1,5 @@
 import React from 'react'
+import Naira from 'react-naira'
 import { Heartbeat , ArrowsLeftRight } from 'phosphor-react'
 import './Records.scss'
 
@@ -13,7 +14,7 @@ const Records = () => {
                      <h5 className="record__name">Mr Omotoshaba</h5>
                      <p className="record__time">07:30 pm</p>
                  </div>
-                <p className="record__amount">+120,000</p>
+                <p className="record__amount"><Naira>+120000</Naira></p>
             </div>
             <div className="record">
                  <div className="recordsIcon__container"><ArrowsLeftRight size={20} /></div>
@@ -21,7 +22,7 @@ const Records = () => {
                      <h5 className="record__name">Okoro Okpara</h5>
                      <p className="record__time">01:34 am</p>
                  </div>
-                <p className="record__amount">+10,000</p>
+                <p className="record__amount"><Naira>10000</Naira></p>
             </div>
             <div className="record">
                  <div className="recordsIcon__container"><ArrowsLeftRight size={20} /></div>
@@ -29,7 +30,7 @@ const Records = () => {
                      <h5 className="record__name">Shaba Efonga</h5>
                      <p className="record__time">02:50 pm</p>
                  </div>
-                <p className="record__amount">+153,999</p>
+                <p className="record__amount"><Naira>153999</Naira></p>
             </div>
             <div className="record">
                  <div className="recordsIcon__container"><ArrowsLeftRight size={20} /></div>
@@ -37,7 +38,7 @@ const Records = () => {
                      <h5 className="record__name">Okoro Peter</h5>
                      <p className="record__time">06:30 pm</p>
                  </div>
-                <p className="record__amount">+20,000</p>
+                <p className="record__amount"><Naira>20000</Naira></p>
             </div>
             <div className="record">
                  <div className="recordsIcon__container"><ArrowsLeftRight size={20} /></div>
@@ -45,7 +46,7 @@ const Records = () => {
                      <h5 className="record__name">Mr Mmadu</h5>
                      <p className="record__time">08:30 pm</p>
                  </div>
-                <p className="record__amount">+3000</p>
+                <p className="record__amount"><Naira>3000</Naira></p>
             </div>
             <div className="record">
                  <div className="recordsIcon__container"><ArrowsLeftRight size={20} /></div>
@@ -53,7 +54,7 @@ const Records = () => {
                      <h5 className="record__name">Ugwu Chiagozie</h5>
                      <p className="record__time">6:02 am</p>
                  </div>
-                <p className="record__amount">+1,000,000</p>
+                <p className="record__amount"><Naira>10000</Naira></p>
             </div>
             <div className="record">
                  <div className="recordsIcon__container"><ArrowsLeftRight size={20} /></div>
@@ -61,7 +62,7 @@ const Records = () => {
                      <h5 className="record__name">James John</h5>
                      <p className="record__time">09:50 am</p>
                  </div>
-                <p className="record__amount">+16,000</p>
+                <p className="record__amount"><Naira>16000</Naira></p>
             </div>
             
         </div>

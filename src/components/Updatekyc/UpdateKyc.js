@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import Naira from 'react-naira'
 import {useHistory , Link} from 'react-router-dom'
 import {CaretLeft} from 'phosphor-react'
 import './Updatekyc.scss'

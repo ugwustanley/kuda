@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import {useHistory , Link} from 'react-router-dom'
+import Naira from 'react-naira'
 import {CaretLeft ,  Plus} from 'phosphor-react'
 import './Paypage.scss'
 
@@ -18,7 +19,7 @@ const Paypage = () => {
              <div className="bonus">
                  
                  <p>@stanlee</p>
-                 <h5>N50,000</h5>
+                 <h5><Naira>50000</Naira></h5>
                  <Link to="/pay">
                  <button>Pay</button>
                  </Link>
@@ -27,7 +28,7 @@ const Paypage = () => {
              <div className="bonus">
                  
                  <p>@Rex</p>
-                 <h5>N20,000</h5>
+                 <h5><Naira>20000</Naira></h5>
                  <Link to="/pay">
                  <button>Pay</button>
                  </Link>
@@ -35,7 +36,7 @@ const Paypage = () => {
              <div className="bonus">
                  
                  <p>@Chiagozie_ugwu</p>
-                 <h5>N120,000</h5>
+                 <h5><Naira>120000</Naira></h5>
                  <Link to="/pay">
                  <button>Pay</button>
                  </Link>
@@ -43,7 +44,7 @@ const Paypage = () => {
              <div className="bonus">
                  
                  <p>@jamesjohn</p>
-                 <h5>N500,000</h5>
+                 <h5><Naira>150000</Naira></h5>
                  <Link to="/pay">
                  <button>Pay</button>
                  </Link>
