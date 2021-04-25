@@ -6,6 +6,18 @@ import './Withdraw.scss'
 const Withdraw = () => {
     let history =  useHistory()
     const [show , setShow] = useState(false)
+    const [ amt , setAmt] = useState("")
+    
+    const [ isfilled , setIsfilled] = useState(true)
+
+    const handleValidation = (e) =>{
+      if(amt === "" ) {
+        e.preventDefault() 
+        setIsfilled(false)
+      } else{
+          setShow(true)
+      }
+    }
 
 // <label for="Phone">Phone number/$Mobme</label>
 //<input name="Phone" type="text" defaultValue="" id="Phone" class="Phone"></input>
@@ -22,16 +34,16 @@ const Withdraw = () => {
                 
 
                  <label for="amount">Amount</label>
-                 <input name="amount" type="tel" defaultValue="" id="amount" class="amount" />
+                 <input name="amount" onChange={(e) => setAmt(e.target.value)} type="tel" defaultValue="" id="amount" className={isfilled === false ? `fail amount` :` amount` }  />
                  <label for="bank">Bank</label>
 
                  <input name="bank" type="text" defaultValue="Zenith Bank" id="bank" disabled className="bank" />
                  
                  <Link to="/addbank">
-                 <input name="changebank" type="submit" value="Change" id="changebank" class="save changebank" />
+                 <input name="changebank" type="submit" value="Change" id="changebank" className="save changebank" />
                  </Link>
                
-                 <input onClick={() => setShow(true)} name="save" type="submit" value="Withdraw" id="save" class="save" />
+                 <input onClick={ (e) => handleValidation(e)} name="save" type="submit" value="Withdraw" id="save" class="save" />
             </form>
 
           { show === false? <p></p>:

@@ -47,6 +47,16 @@
         .date{
             
         }
+        .fail{
+            border:1px solid rgb(250, 121, 121);
+        }
+        .total{
+            display:block;
+            font-size: 12px;
+            transform: translateY(-10px);
+            font-weight: 700;
+            opacity: .6;
+        }
         .save{
             display:block;
             width:calc(100%);

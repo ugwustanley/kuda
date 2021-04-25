@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import {useHistory , Link} from 'react-router-dom'
 import Naira from 'react-naira'
-import {CaretLeft ,  Plus} from 'phosphor-react'
+import {CaretLeft ,  Plus , ArrowRight} from 'phosphor-react'
 import './Paypage.scss'
 
 const Paypage = () => {
@@ -15,30 +15,30 @@ const Paypage = () => {
                  </div>
                 <h5>Make Payment</h5>
             </div>
-            <div>
+            <div className="paypage__content">
              <div className="bonus">
                  
                  <p>@stanlee</p>
                  <h5><Naira>50000</Naira></h5>
                  <Link to="/pay">
-                 <button>Pay</button>
+                 <button>pay</button>
                  </Link>
              </div>
              
              <div className="bonus">
                  
-                 <p>@Rex</p>
+                 <p>@rex</p>
                  <h5><Naira>20000</Naira></h5>
                  <Link to="/pay">
-                 <button>Pay</button>
+                 <button>pay</button>
                  </Link>
              </div>
              <div className="bonus">
                  
-                 <p>@Chiagozie_ugwu</p>
+                 <p>@chiagozie_ugwu</p>
                  <h5><Naira>120000</Naira></h5>
                  <Link to="/pay">
-                 <button>Pay</button>
+                 <button>pay</button>
                  </Link>
              </div>
              <div className="bonus">
@@ -46,13 +46,21 @@ const Paypage = () => {
                  <p>@jamesjohn</p>
                  <h5><Naira>150000</Naira></h5>
                  <Link to="/pay">
-                 <button>Pay</button>
+                 <button>pay</button>
+                 </Link>
+             </div>
+             <div className="bonus">
+                 
+                 <p>@paul</p>
+                 <h5><Naira>10000</Naira></h5>
+                 <Link to="/pay">
+                 <button>pay</button>
                  </Link>
              </div>
          </div>
          <Link to="/pay">
              <div className="add">
-                 <Plus size={40}   color="#fff" />
+                 <Plus size={25}   color="#fff" />
              </div>
          </Link>
             

@@ -36,7 +36,10 @@ import Recurr from '../Recurr/Recurr'
 import Transaction from '../Transaction/Transaction'
 import Signup from "../Signup/Signup"
 import ShopDetails3 from '../ShopDetails3/ShopDetails3'
+import Admin from '../Admin/Admin'
+import Adminorg from '../Adminorg/Adminorg'
 import Request from '../Request/Request'
+import ComingSoon from '../ComingSoon/ComingSoon'
 import Book from '../Book/Book'
 import CreateShop from '../CreateShop/CreateShop'
 import BookMec from '../BookMec/BookMec'
@@ -60,6 +63,7 @@ const Main = () => {
                 <Route exact path='/payments'  component={Payments} />
                 <Route exact path='/budget'  component={Budget} />
                 <Route exact path='/card' component={Cards} />
+                <Route exact path='/comingsoon' component={ComingSoon } />
                 <Route exact path='/more' component={More} />
                 <Route exact path='/createshop' component={CreateShop} />
                 <Route exact path='/kin' component={Kin} />
@@ -87,6 +91,8 @@ const Main = () => {
                 <Route exact path='/recurr' component={Recurr} />
                 <Route exact path='/failed' component={Failed} />
                 <Route exact path='/success' component={Success} />
+                <Route exact path='/Admin' component={Admin} />
+                <Route exact path='/Adminorg' component={Adminorg} />
                 <Route exact path='/withdraw' component={Withdraw} />
                 <Route exact path='/bonuses' component={Bonuses} />
                 <Route exact path='/balance' component={Balance} />

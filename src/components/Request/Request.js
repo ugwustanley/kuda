@@ -76,7 +76,7 @@ const Request = () => {
                  <label for="amount">Amount</label>
                  <input name="amount" onChange={(e) => setAcc(e.target.value)} type="tel" defaultValue="" id="amount" className={isfilled === false ? `fail amount` :` amount` }  />
 
-                 <input onClick={ (e) => handleValidation(e)}name="save" type="submit" value="Make request" id="save" className="save"/>
+                 <input onClick={ (e) => handleValidation(e)} name="save" type="submit" value="Make request" id="save" className="save"/>
             </form>
 
           { show === false? <p></p>:

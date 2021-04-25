@@ -17,6 +17,7 @@
            position: fixed;
            bottom:10px;
            left:calc(50% - 25px);
+           right:0;
            box-shadow: 1px 1px 5px 2px rgb(226, 226, 226);
            animation: float 1s ease-in-out infinite;
            @keyframes float {
@@ -50,30 +51,44 @@
             margin-right:auto;
         }
     }
+    &__content{
+        background-color: #fff;
+        padding:5px 5px;
+        padding-bottom: 20px;
+    }
    .bonus{
-       border-radius:8px;
-       background-color:#fff;
+   
        display:grid;
        grid-template-columns:2fr 2fr 1fr;
        padding:10px;
        align-items: center;
-       margin:20px 0px;
+       margin:10px 0px;
+       border-bottom:3px solid #f7f7f7;
        button{
            border:none;
            outline:none;
-           background: #301a96;
+           border-radius: 8px;
+          
            color:#fff;
-           padding:10px 20px;
+           background-color: #311a96de;
+           padding:6px 20px;
+           display: flex;
+           font-weight: 700;
+           transition: .2s;
+           &:hover{
+               background-color: #301a96;
+               color:#fff;
+           }
        } 
        p{
            text-align: left;
-           font-weight: 600;
+           font-weight: 700;
            font-size: 14px;
-           color:#301a96;
+
        }
        h5{
            text-align: right;
-           padding-right:20px;
+           padding-right:10px;
            font-size: 12px;
            margin:0px;
            color:#444;
