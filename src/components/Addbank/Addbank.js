@@ -117,10 +117,10 @@ const Addbank = () => {
                  <input name="acc" onChange={(e) => setAccname(e.target.value)} type="tel" defaultValue="" id="acc" className={isfilled === false ? `fail acc` :` acc` } />
 
                  <label for="otp">Amount</label>
-                 <input disabled name="charges" type="text" defaultValue="N100" id="charges" class="charges"></input>
+                 <input disabled name="charges" type="text" defaultValue="N100" id="charges" class="charges" />
                  <p>A minimum deposit of 100 Naira validates your account</p>
 
-                  <input onClick={ (e) => handleValidation(e)}  name="save" type="submit" value="Deposit" id="save" class="save"></input> 
+                  <input onClick={ (e) => handleValidation(e)}  name="save" type="submit" value="Deposit" id="save" class="save" />
                  </div>
 
             </form>

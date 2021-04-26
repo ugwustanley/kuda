@@ -7,6 +7,21 @@ import './BookMec.scss'
 const BookMec = () => {
     let history =  useHistory()
     const [currentstate , setCurrentstate] = useState("Abia")
+   
+    const [lga, setLga] = useState("")
+    const [vehicle , setVehicle] = useState("")
+    const [town , setTown] = useState("Aba North")
+
+    const [ isfilled , setIsfilled] = useState(true)
+
+    const handleValidation = (e) =>{
+      if(town === "" || vehicle === "" || currentstate === "" ) {
+        e.preventDefault() 
+        setIsfilled(false)
+      } else{
+          setIsfilled(true)
+      }
+    }
   //  const [show , setShow] = useState(false)
   //<input name="file" type="text" defaultValue="" id="file" class="file" ></input>
 // <input name="cost" type="text" defaultValue="" id="cost" placeholder="Cost price" class="cost" />
@@ -24,23 +39,23 @@ console.log(NaijaStates.lgas("Oyo"))
 
             <form className="form" onSubmit={(e) => e.preventDefault()}>
                 
-                <select class="cost" DefaultValue="Choose vehicle" >
+                <select onChange={(e) => setVehicle(e.target.value)}  DefaultValue="Choose vehicle" className={isfilled === false ? `fail cost` : `cost` }>
                      <option value="Choose vehicle">Choose vehicle</option>
                      <option value="Toyota">Toyota</option>
                      <option value="Ford">Ford</option>
                  </select>
-                 <select onChange={(e) => setCurrentstate(e.target.value)}>
+                 <select onChange={(e) => setCurrentstate(e.target.value)} className={isfilled === false ? `fail name` : `name` }>
                {NaijaStates.states().map( state => <option valuue={state}>{state}</option>)}
                </select>
 
-               <select defaultValue = "Town" id="state" className="state">
+               <select onChange={(e) => setTown(e.target.value)} defaultValue = "Town" id="state" className="state" className={isfilled === false ? `fail name` : `name` }>
 
                 {NaijaStates.lgas(currentstate).lgas.map( lga => <option value={lga}>{lga}</option>)}
 
                </select>
 
 
-                 <input name="save" type="submit" value="SEARCH" id="save" class="save" />
+                 <input onClick={ (e) => handleValidation(e)} name="save" type="submit" value="SEARCH" id="save" class="save" />
             </form>
 
    

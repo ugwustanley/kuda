@@ -7,6 +7,23 @@ import './AddVehicle.scss'
 const AddVehicle = () => {
     let history =  useHistory()
     const [currentstate , setCurrentstate] = useState("Abia")
+    const [brand , setBrand ] = useState("")
+    const [model , setModel] = useState("")
+    const [year, setYear] = useState("")
+    const [mec, setMec] = useState("")
+    const [phone , setPhone] = useState("")
+    const [mark , setMark] = useState("")
+
+    const [ isfilled , setIsfilled] = useState(true)
+
+    const handleValidation = (e) =>{
+      if(model === "" || mec === "" || phone === "" || mark === "" || brand === ""  ) {
+        e.preventDefault() 
+        setIsfilled(false)
+      } else{
+          setIsfilled(true)
+      }
+    }
   //  const [show , setShow] = useState(false)
   //<input name="file" type="text" defaultValue="" id="file" class="file" ></input>
 // <input name="cost" type="text" defaultValue="" id="cost" placeholder="Cost price" class="cost" />
@@ -23,11 +40,11 @@ const AddVehicle = () => {
 
             <form className="form" onSubmit={(e) => e.preventDefault()}>
                   <p className='p'>Add vehicle</p>
-                 <input name="name" type="text" defaultValue="" id="name" class="name" placeholder="Brand" />
+                 <input name="name" onChange={(e) => setBrand(e.target.value)} type="text" defaultValue="" id="name" className={isfilled === false ? `fail name` : `name` } placeholder="Brand" />
                        
-                 <input name="name" type="text" defaultValue="" id="name" class="name" placeholder="Model" />
+                 <input onChange={(e) => setModel(e.target.value)} name="name" type="text" defaultValue="" id="name"  className={isfilled === false ? `fail name` : `name` } placeholder="Model" />
                        
-                 <input name="name" type="number" defaultValue="" id="name" class="name" placeholder="year" />
+                 <input onChange={(e) => setYear(e.target.value)} name="name" type="number" defaultValue="" id="name"  className={isfilled === false ? `fail name` : `name` } placeholder="year" />
 
                  
                  <div className="file">
@@ -40,28 +57,28 @@ const AddVehicle = () => {
                 <p className='p'>Best mechanic for this car</p>
 
                       
-                <input name="name" type="text" defaultValue="" id="name" class="name" placeholder="Mechanic name" />
+                <input onChange={(e) => setMec(e.target.value)} name="name" type="text" defaultValue="" id="name"  className={isfilled === false ? `fail name` : `name` } placeholder="Mechanic name" />
 
                       
-                <input name="name" type="tel" defaultValue="" id="name" class="name" placeholder="Phone number" />
+                <input onChange={(e) => setPhone(e.target.value)} name="name" type="tel"  defaultValue="" id="name"  className={isfilled === false ? `fail name` : `name` } placeholder="Phone number" />
 
                 
-                <select onChange={(e) => setCurrentstate(e.target.value)}>
+                <select onChange={(e) => setCurrentstate(e.target.value)}   className={isfilled === false ? `fail name` : `name` }>
                {NaijaStates.states().map( state => <option valuue={state}>{state}</option>)}
                </select>
 
-               <select defaultValue = "Town" id="state" className="state">
+               <select defaultValue = "Town" id="state"   className={isfilled === false ? `fail state` : `state` }>
 
                 {NaijaStates.lgas(currentstate).lgas.map( lga => <option value={lga}>{lga}</option>)}
 
                </select>
 
 
-                <input name="name" type="text" defaultValue="" id="name" class="name" placeholder="Workshop Landmark" />
+                <input name="name" onChange={(e) => setMark(e.target.value)} type="text" defaultValue="" id="name"  className={isfilled === false ? `fail name` : `name` } placeholder="Workshop Landmark" />
                 
                
 
-                 <input name="save" type="submit" value="SUBMIT" id="save" class="save" />
+                 <input onClick={ (e) => handleValidation(e)} name="save" type="submit" value="SUBMIT" id="save" className="save" />
             </form>
 
    
