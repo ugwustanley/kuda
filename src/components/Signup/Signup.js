@@ -4,11 +4,25 @@ import './Signup.scss'
 
 const Signup = () => {
     const [show , setShow] = useState(false)
+    const [ email , setEmail] = useState("")
+    const [pass , setPass] = useState("")
+    const [name , setName] = useState("")
+    const [ isfilled , setIsfilled] = useState(true)
+
+    const handleValidation = (e) =>{
+      if(pass === "" || email === "" || name === "" ) {
+        e.preventDefault() 
+        setIsfilled(false)
+      } else{
+          setShow(true)
+      }
+    }
     
     const handleSubmit = (e) =>{
         setShow(true)
         e.preventDefault()
     }
+
     return (
        
 
@@ -18,12 +32,12 @@ const Signup = () => {
 <p>Please fill this form to create an account</p>
 <form onSubmit={(e) => handleSubmit(e) } className="form">
     <label for="name">Name</label>
-    <input type="text" name="name" id="name" className="name" />
+    <input type="text" onChange={(e) => setName(e.target.value)} name="name" id="name" className={isfilled === false ? `fail name` :`name` } />
     <label for="email">Email address</label>
-    <input type="email" name="email" id="email" className="email" />
+    <input type="email" onChange={(e) => setEmail(e.target.value)} name="email" id="email" className={isfilled === false ? `fail email` :`email` } />
     <label for="password">Password</label>
-    <input type="password" name="" id="password" className="password" />
-    <input  name="Submit" value="Sign Up" type="submit" id="submit" className="submit" />
+    <input type="password" onChange={(e) => setPass(e.target.value)} name="" id="password" className={isfilled === false ? `fail password` :`password` } />
+    <input onClick={ (e) => handleValidation(e)}  name="Submit" value="Sign Up" type="submit" id="submit" className="submit" />
 </form>
 <p className="to_login">Already have an account with us? <Link to="/login"><b>Login</b></Link></p>
 

@@ -7,6 +7,21 @@ import './Kin.scss'
 const Kin = () => {
     let history =  useHistory()
     const [show , setShow] = useState(false)
+    const [ email , setEmail] = useState("")
+    const [phone , setPhone] = useState("")
+    const [name , setName] = useState("")
+    const [rel ,  setRel] = useState("")
+    const [gender , setGender] = useState("")
+    const [ isfilled , setIsfilled] = useState(true)
+
+    const handleValidation = (e) =>{
+      if(phone === "" || email === "" || name === "" || rel === "" || gender === "" ) {
+        e.preventDefault() 
+        setIsfilled(false)
+      } else{
+          setShow(true)
+      }
+    }
     return (
         <div className="kin">
             <div className="kin__heading">
@@ -18,15 +33,15 @@ const Kin = () => {
             <form onSubmit={(e) => e.preventDefault()}>
                 <p>Your next of kin will recieve your $mobme balance if life happens</p>
    
-                 <input name="fullname" type="text" defaultValue="" id="fullname" placeholder="Full Name" className="fullname" />
+                 <input  onChange={(e) => setName(e.target.value)} name="fullname" type="text" defaultValue="" id="fullname" placeholder="Full Name" className={isfilled === false ? `fail fullname` :`fullname`}/>
 
-                 <input name="email" type="text" defaultValue="" id="email" placeholder="Email" className="email" />
+                 <input  onChange={(e) => setEmail(e.target.value)} name="email" type="text" defaultValue="" id="email" placeholder="Email" className={isfilled === false ? `fail email` :`email`} />
 
-                 <input name="phone" type="tel" defaultValue="" id="phone" placeholder="Phone" className="phone" />
+                 <input  onChange={(e) => setPhone(e.target.value)} name="phone" type="tel" defaultValue="" id="phone" placeholder="Phone" className={isfilled === false ? `fail phone` :`phone`} />
 
                  <h4>Other Details</h4>
 
-                 <select defaultValue="Relationship" className="select" name="Gender">
+                 <select  onChange={(e) => setRel(e.target.value)} defaultValue="Relationship" className={isfilled === false ? `fail select` :`select`} name="Gender">
                      <option value="Relationship" disabled>Relationship</option>
                      <option value="Mother">Mother</option>
                      <option value="Father">Father</option>
@@ -41,14 +56,14 @@ const Kin = () => {
                      <option value="Other">Other</option>
                  </select>
 
-                 <select defaultValue="Gender" className="select" name="Gender">
+                 <select  onChange={(e) => setGender(e.target.value)} defaultValue="Gender" className={isfilled === false ? `fail select` :`select`} name="Gender">
                      <option value="Gender" disabled>Gender</option>
                      <option value="female">Male</option>
                      <option value="Female">Female</option>
                  </select>
           
 
-                 <input onClick={() => setShow(true)} name="save" type="submit" value="Save Changes" id="save" class="save" />
+                 <input onClick={ (e) => handleValidation(e)} name="save" type="submit" value="Save Changes" id="save" class="save" />
             </form>
 
           { show === false? <p></p>:

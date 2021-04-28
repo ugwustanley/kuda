@@ -8,6 +8,38 @@ const Updatekyc = () => {
     let history =  useHistory()
     const [show , setShow] = useState(true)
     const [showing , setShowing] = useState(1)
+    const [ email , setEmail] = useState("")
+    const [ acc , setAcc] = useState("")
+    const [org , setOrg] = useState("")
+    const [ isfilled , setIsfilled] = useState(true)
+    const [ isfilled2 , setIsfilled2] = useState(true)
+    const [ isfilled3 , setIsfilled3] = useState(true)
+
+    const handleValidation1 = (e) =>{
+      if( email === "" ) {
+        e.preventDefault() 
+        setIsfilled(false)
+      } else{
+        setShowing(2)
+      }
+    }
+
+    const handleValidation2 = (e) =>{
+        if( acc === "" ) {
+          e.preventDefault() 
+          setIsfilled2(false)
+        } else{
+          setShowing(3)
+        }
+      }
+      const handleValidation3 = (e) =>{
+        if( org === "" ) {
+          e.preventDefault() 
+          setIsfilled3(false)
+        } else{
+          setIsfilled3(true)
+        }
+      }
 // <input name="bankname" type="text" defaultValue="" id="bankname" class="bankname"></input>
 
     return (
@@ -22,9 +54,9 @@ const Updatekyc = () => {
                 {showing !== 1 ? <p></p>: 
               <div>
                  <label for="email">Enter Email Address</label>
-                 <input name="email" type="email" defaultValue="" id="email" class="email"></input>
+                 <input  onChange={(e) => setEmail(e.target.value)} name="email" type="email" defaultValue="" id="email" className={isfilled === false ? `fail email` :`email`} />
 
-                 <input onClick={() => setShowing(2)} name="save" type="submit" value="Submit" id="submit" class="save"></input>
+                 <input onClick={ (e) => handleValidation1(e)} name="save" type="submit" value="Submit" id="submit" className="save" />
                
               </div>
                }
@@ -113,21 +145,21 @@ const Updatekyc = () => {
                 </select>
 
                  <label for="acc">Account Number</label>
-                 <input name="acc" type="tel" defaultValue="" id="acc" class="acc"></input>
+                 <input name="acc"  onChange={(e) => setAcc(e.target.value)} type="tel" defaultValue="" id="acc" className={isfilled2 === false ? `fail acc` :`acc`} />
 
                  <label for="otp">Amount</label>
-                 <input name="otp" type="text" disabled defaultValue="N100" id="otp" class="otp" />
+                 <input name="otp" type="text" disabled defaultValue="N100" id="otp" className="otp" />
                  <p>A minimum deposit of 100 Naira validates your account</p>
-                 <input onClick={() => setShowing(3)}  name="save" type="submit" value="Deposit" id="save" class="save" />
+                 <input onClick={ (e) => handleValidation2(e)}  name="save" type="submit" value="Deposit" id="save" className="save" />
                  </div>
                   }
                   {showing !== 3? <p></p>: 
                  <div>
                  <h3>Activate Organization mobkey</h3>
                  <label for="orgmob">Enter Organization $mobme</label>
-                 <input name="orgmob" type="text" defaultValue="" id="orgmob" class="orgmob"></input>
+                 <input name="orgmob"  onChange={(e) => setOrg(e.target.value)} type="text" defaultValue="" id="orgmob" className={isfilled3 === false ? `fail orgmob` :`orgmob`} />
 
-                 <input  name="save" type="submit" value="Submit" id="submit" class="save"></input>
+                 <input onClick={ (e) => handleValidation3(e)}  name="save" type="submit" value="Submit" id="submit" className="save" />
                 </div>
                   }
             </form>
