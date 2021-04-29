@@ -30,7 +30,9 @@ import Kin from '../Kin/Kin'
 import CreateProduct from '../CreateProduct/CreateProduct'
 import More from '../More/More'
 import Expense from '../Expense/Expense'
+import Payroll2 from '../Payroll2/Payroll2'
 import Menu from '../Menu/Menu'
+import Payroll from '../Payroll/Payroll'
 import Login from '../Login/Login'
 import Recurr from '../Recurr/Recurr'
 import Transaction from '../Transaction/Transaction'
@@ -87,6 +89,7 @@ const Main = () => {
                 <Route exact path='/addvehicle' component={AddVehicle} />
                 <Route exact path='/account' component={Account} />
                 <Route exact path='/request' component={Request} />
+                <Route exact path='/payroll2' component={Payroll2} />
                 <Route exact path='/referral' component={Referral} />
                 <Route exact path='/recurr' component={Recurr} />
                 <Route exact path='/failed' component={Failed} />
@@ -95,6 +98,7 @@ const Main = () => {
                 <Route exact path='/Adminorg' component={Adminorg} />
                 <Route exact path='/withdraw' component={Withdraw} />
                 <Route exact path='/bonuses' component={Bonuses} />
+                <Route exact path='/payroll' component={Payroll} />
                 <Route exact path='/balance' component={Balance} />
                 <Route exact path='/Create' component={CreateProduct} />
                 <Route exact path='/rewards' component={Rewards} />

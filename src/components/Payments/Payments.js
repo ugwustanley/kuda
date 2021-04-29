@@ -7,13 +7,15 @@ const Payments = () => {
     return (
         <div className="payments">
             <h5 className="payments__heading">Payments</h5>
+          <Link to="/payroll">
             <div className="payments__friends">
                 <div className="payments__message">
-                    <h5>Activate Friends</h5>
-                    <p>Find your contacts on Rand</p>
+                    <h5>Payroll</h5>
+                    <p>Set employee payroll</p>
                 </div>
                 <button className="payments__button">Activate</button>
             </div>
+            </Link>
             <div className="payments__links">
             <Link to="/paypage">
             <LinkCard  IconOne={Handshake} Heading="Pay" ParaG="Make Peer to Peer Transfer" />
