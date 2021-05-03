@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import Naira from 'react-naira'
+import Countdown from 'react-countdown'
 import {useHistory , Link} from 'react-router-dom'
 import Spare from './images/spare.jpg'
 import {CaretLeft, MapPin ,  ArrowLeft , ArrowRight} from 'phosphor-react'
@@ -30,10 +31,14 @@ const ShopDetails3 = () => {
                         <img className="image" src={Spare}></img>
                         <div className="row1__half2">
                             <h3>Headlamp Gx Q460 2021</h3>
-                            <button className="btn rand">Rand number</button>
+                            <div className="countdown">
+                            <Countdown date={Date.now() + 5000000000}>
+     
+                            </Countdown>
+                           </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                             <h1><Naira>36000</Naira></h1>
-                            <button className="btn btn2">Buy now</button>
+                            <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
                       </div>
 
                      
@@ -55,10 +60,14 @@ const ShopDetails3 = () => {
                         <img className="image" src={Spare}></img>
                         <div className="row1__half2">
                             <h3>Headlamp Gx Q460 2021</h3>
-                            <button className="btn rand">Rand number</button>
+                            <div className="countdown">
+                            <Countdown date={Date.now() + 5000000000}>
+     
+                            </Countdown>
+                           </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                             <h1><Naira>36000</Naira></h1>
-                            <button className="btn btn2">Buy now</button>
+                            <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
                       </div>
 
                      
@@ -80,10 +89,14 @@ const ShopDetails3 = () => {
                         <img className="image" src={Spare}></img>
                         <div className="row1__half2">
                             <h3>Headlamp Gx Q460 2021</h3>
-                            <button className="btn rand">Rand number</button>
+                            <div className="countdown">
+                            <Countdown date={Date.now() + 5000000000}>
+     
+                            </Countdown>
+                           </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                             <h1><Naira>36000</Naira></h1>
-                            <button className="btn btn2">Buy now</button>
+                            <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
                       </div>
 
                      
@@ -105,10 +118,14 @@ const ShopDetails3 = () => {
                         <img className="image" src={Spare}></img>
                         <div className="row1__half2">
                             <h3>Headlamp Gx Q460 2021</h3>
-                            <button className="btn rand">Rand number</button>
+                            <div className="countdown">
+                            <Countdown date={Date.now() + 5000000000}>
+     
+                            </Countdown>
+                           </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                             <h1><Naira>36000</Naira></h1>
-                            <button className="btn btn2">Buy now</button>
+                            <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
                       </div>
 
                      
@@ -130,10 +147,14 @@ const ShopDetails3 = () => {
                         <img className="image" src={Spare}></img>
                         <div className="row1__half2">
                             <h3>Headlamp Gx Q460 2021</h3>
-                            <button className="btn rand">Rand number</button>
+                            <div className="countdown">
+                            <Countdown date={Date.now() + 5000000000}>
+     
+                            </Countdown>
+                           </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                             <h1><Naira>36000</Naira></h1>
-                            <button className="btn btn2">Buy now</button>
+                            <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
                       </div>
 
                      
@@ -155,10 +176,14 @@ const ShopDetails3 = () => {
                         <img className="image" src={Spare}></img>
                         <div className="row1__half2">
                             <h3>Headlamp Gx Q460 2021</h3>
-                            <button className="btn rand">Rand number</button>
+                            <div className="countdown">
+                            <Countdown date={Date.now() + 5000000000}>
+     
+                            </Countdown>
+                           </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                             <h1><Naira>36000</Naira></h1>
-                            <button className="btn btn2">Buy now</button>
+                            <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
                       </div>
 
                      

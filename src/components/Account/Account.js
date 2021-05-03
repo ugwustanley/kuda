@@ -7,11 +7,11 @@ import './Account.scss'
 const Account = () => {
     return (
         <div className="account">
-            <div class="account__info">
+            <div className="account__info">
 
             <img src={Photo}></img>
-            <h3 className="name">Ugwu Stanley</h3>
-            <p className="tag">@Stanlee</p>
+            <h3 className="name">Kwado Nzeh</h3>
+            <p className="tag">@Nzeh1</p>
             </div>
           
            <div className="general group">

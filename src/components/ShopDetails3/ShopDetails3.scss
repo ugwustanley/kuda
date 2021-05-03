@@ -104,10 +104,22 @@
                     color:#3eb738;
 
                 }
+                .countdown{
+                    margin-bottom:10px;
+                    margin-top:-10px;
+                    font-weight: 800;
+                }
+                a{
+                    text-decoration: none;
+                }
                 .btn2{
                     border:none;
-                    float:right;
+                    display:flex ;
+                    transform: translateX(88px);
+                    text-decoration: none;
+                    justify-self:center;
                     margin-top:-27px;
+                   
                     color:rgb(245, 245, 245);
                     background-color:#3eb738;
                 }

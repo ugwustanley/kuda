@@ -7,7 +7,7 @@ const Payments = () => {
     return (
         <div className="payments">
             <h5 className="payments__heading">Payments</h5>
-          <Link to="/payroll">
+          <Link to="/payroll2">
             <div className="payments__friends">
                 <div className="payments__message">
                     <h5>Payroll</h5>

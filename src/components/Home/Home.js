@@ -20,9 +20,9 @@ const Home = () => {
                    <img className="profile" src={Stanley} alt="profile_image"></img>
                    <div className="intro__message">
                        <Link to="/setting">
-                       <div><h4>Hi, Ugwu stanley</h4> <img className="status" src={Status} alt="status"></img></div>
+                       <div><h4>Hi, Kwado Nzeh</h4> <img className="status" src={Status} alt="status"></img></div>
                        </Link>
-                       <h6>@stanlee</h6>
+                       <h6>@Nzeh1</h6>
                    </div>
                     <div className="add__money" >
                        <Link to="/notification">

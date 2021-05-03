@@ -59,7 +59,7 @@ const Main = () => {
     
     return (
         <div className="main">
-            <Router>
+          
 
                 <Route exact path='/'  component={Home} />
                 <Route exact path='/payments'  component={Payments} />
@@ -114,7 +114,7 @@ const Main = () => {
                 <Route exact path="/shop" component={Shop} />
                 <Route exact path={['/' , '/payments', '/budget', '/card' , '/more', '/setting' , '/account']} component={Menu} />
                
-            </Router>
+           
             
         </div>
     )

@@ -88,6 +88,11 @@
                     border-radius: 2px;
                     background-color: rgb(229, 226, 226);
                 }
+                .countdown{
+                    margin-bottom:10px;
+                    margin-top:-10px;
+                    font-weight: 800;
+                }
                 .rand{
                     display:block;
                     border:none;
@@ -104,10 +109,17 @@
                     color:#3eb738;
 
                 }
+                a{
+                    text-decoration: none;
+                }
                 .btn2{
                     border:none;
-                    float:right;
+                    display:flex ;
+                    transform: translateX(88px);
+                    text-decoration: none;
+                    justify-self:center;
                     margin-top:-27px;
+                   
                     color:rgb(245, 245, 245);
                     background-color:#3eb738;
                 }

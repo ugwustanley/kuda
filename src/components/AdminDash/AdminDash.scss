@@ -1,0 +1,246 @@
+.admindash{
+    width:100%;
+    min-height:100vh;
+    background-color: #fff;
+    padding:0;
+    margin:0;
+    display:flex;
+    overflow: visible !important;
+    @media  screen and (max-width:900px) {
+        
+        min-width:1000px;
+        position:absolute;
+        width:100%;
+        object-fit: contain;
+    }
+    
+ 
+    
+   
+   &__nav{
+       
+       width:270px;
+       height:100vh;
+       overflow-y: scroll;
+       position: relative;
+       background-color: #301a96;
+       color:#fff;
+       &::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      &::-webkit-scrollbar-track {
+        
+        border-radius: 10px;
+      }
+      
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #4f35c2a1;
+        border-radius: 10px;
+      }
+       .admindash__cancel{
+           position: absolute;
+           right:20px;
+           top:20px;
+           display:none;
+       }
+       ul{
+           margin-top:80px;
+           margin-left:0;
+           padding-left:20px;
+           .active{
+            background-color: #6857b357;
+           }
+           li{
+               text-decoration: none;
+               list-style: none;
+               margin-top:0px;
+               cursor:pointer;
+               display:block;
+               width:170px;
+               height:50px;
+               position:relative;
+               border-radius: 30px;
+               &:hover{
+                background-color: #6857b357
+               }
+               
+               p{
+                   font-weight: 600;
+                   font-size: 18px;
+                   padding:7px 30px;
+                   padding-top:12px;
+               }
+           }
+       }
+   }
+   .nav__showing{
+    transform: translateX(0);
+    transition: .2s;
+    width:calc(100% - 0px);
+   }
+   .nav__hiding{
+    transform: translateX(-0px);
+    transition: .2s;
+    width:100%;
+    }
+   
+   &__body{
+      
+       height:100vh;
+       position: relative;
+       overflow-y: scroll;
+       background-color: #f7f7f7;
+       &::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      &::-webkit-scrollbar-track {
+        
+        border-radius: 10px;
+      }
+      
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 10px;
+      }
+       .admindash__menu{
+           position: absolute;
+           top:20px;
+           left:20px;
+           cursor:pointer;
+          
+       }
+       .admindash__main{
+        margin-top: 80px;
+        min-height: calc(100vh - 80px);
+        padding:0px;
+        margin-bottom:340px;
+        .admindash__weekly{
+            background-color: #fff;
+            width:300px;
+            margin-left:22px;
+            padding:20px;
+            float: right;
+            margin-right:25px;
+            margin-top:20px;
+            margin-bottom:50px;
+            border-radius: 5px;
+            overflow:hidden;
+            
+            .daily__tab{
+                animation-duration: .3s;
+                animation-timing-function: ease-out;
+                animation-iteration-count: 1;
+              
+                 @keyframes show1 {
+                     from {
+                         transform: translateX(50px);
+                     }
+                     to{
+                         transform:translateX(0px);
+                     }
+                 }
+            }
+           .weekly__tab{
+                animation-duration: .3s;
+                animation-timing-function: ease-out;
+                animation-iteration-count: 1;
+              
+                 @keyframes show2 {
+                    from {
+                        transform: translateX(-50px);
+                    }
+                    to{
+                        transform:translateX(0px);
+                    }
+                 }
+            }
+            &__content{
+                display:flex;
+                justify-content: space-between;
+                p{
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+            }
+            .heading{
+                display:flex;
+                justify-content:space-around;
+                cursor:pointer;
+                .activated{
+                    opacity: .4;
+                }
+            }
+        }
+        .admindash__overview{
+            background-color: transparent;
+             display:flex;
+             flex-wrap: wrap;
+             justify-content: space-between;
+             margin: 0 23px;
+           
+
+            div{
+                width:230px;
+                height:80px;
+                padding:10px;
+               
+                border-radius: 10px;
+                color:#fff;
+                display:grid;
+                place-content:center;
+                
+                margin-bottom:20px;
+                p{
+                    font-size: 20px;
+                    
+                    font-weight: 600;
+                    margin:0;
+                }
+                h4{
+                    font-size:35px;
+                    text-align: center;
+                    font-weight: 600;
+                    margin:0;
+                    margin-top:0px;
+                }
+            }
+            .orders__delivered{
+                background-color: rgba(210, 105, 30, 0.349);
+                color: chocolate;
+            }
+            .total__orders{
+                background-color:rgba(153, 50, 204, 0.5);
+                color:rgba(153, 50, 204, 9.5);
+            }
+            .orders__recieved{
+                background-color: rgba(255, 140, 0, 0.39);
+                color:darkorange;
+            }
+            .new__customers{
+                background-color: rgba(137, 43, 226, 0.404);
+                color:blueviolet;
+            }
+        }
+    }
+   }
+ 
+ 
+   
+}
+.nav__hide{
+    transition:display .2s;
+    transform: translateX(-230px);
+    display: none;
+    
+   
+}
+.nav__show{
+ transition: .2s;
+ transform: translateX(0px);
+}
