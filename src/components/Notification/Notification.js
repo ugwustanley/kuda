@@ -15,8 +15,8 @@ const Notification = () => {
             </div>
             <h5 className="notification__day">June, 2021</h5>
            <div className="notification__message">
-                <h5 >Welcome back to Rand</h5> 
-                <p>Hi, Ugwu Stanley, your rand number is 0000000000 and you can now use your account right away</p>   
+                <h5 >Welcome back to Randmob</h5> 
+                <p>Hi, Kwado Nzeh, your rand number is 0000000000 and you can now use your account right away</p>   
            </div>
             
         </div>

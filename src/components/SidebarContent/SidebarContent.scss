@@ -1,0 +1,125 @@
+.admindash__main{
+    margin-top: 80px;
+    
+    padding:0px;
+   
+    .admindash__weekly{
+        background-color: #fff;
+        width:300px;
+        margin-left:22px;
+        padding:20px;
+        float: right;
+        margin-right:25px;
+        margin-top:20px;
+        margin-bottom:50px;
+        border-radius: 5px;
+        overflow:hidden;
+        @media screen and (max-width:400px){
+            width:calc(100% - 95px);
+            margin-bottom: 400px;
+        }
+        .daily__tab{
+            animation-duration: .3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 1;
+          
+             @keyframes show1 {
+                 from {
+                     transform: translateX(50px);
+                 }
+                 to{
+                     transform:translateX(0px);
+                 }
+             }
+        }
+       .weekly__tab{
+            animation-duration: .3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 1;
+          
+             @keyframes show2 {
+                from {
+                    transform: translateX(-50px);
+                }
+                to{
+                    transform:translateX(0px);
+                }
+             }
+        }
+        &__content{
+            display:flex;
+            justify-content: space-between;
+            p{
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+        .heading{
+            display:flex;
+            justify-content:space-around;
+            cursor:pointer;
+            .activated{
+                opacity: .4;
+            }
+        }
+    }
+    .admindash__overview{
+        background-color: transparent;
+         display:flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin: 20px 3px;
+         margin-top:100px;
+         @media screen and (max-width:600px){
+             justify-content: center;
+         }
+       
+
+        div{
+            width:200px;
+            height:70px;
+            padding:10px;
+            margin-left:20px;
+            margin-right:20px;
+            border-radius: 5px;
+            color:#fff;
+            display:grid;
+            place-content:center;
+            
+            margin-bottom:20px;
+            p{
+                font-size: 15px;
+                
+                font-weight: 600;
+                margin:0;
+            }
+            h4{
+                font-size:30px;
+                text-align: center;
+                font-weight: 600;
+                margin:0;
+                margin-top:0px;
+            }
+        }
+        .total__orders:nth-child(3){
+            background-color: rgba(210, 105, 30, 0.349);
+            color: chocolate;
+        }
+        .total__orders:nth-child(1){
+            background-color:rgba(153, 50, 204, 0.5);
+            color:rgba(153, 50, 204, 9.5);
+        }
+        .total__orders:nth-child(2){
+            background-color: rgba(255, 140, 0, 0.39);
+            color:darkorange;
+        }
+        .total__orders:nth-child(4){
+            background-color: rgba(137, 43, 226, 0.404);
+            color:blueviolet;
+        }
+        .total__orders:nth-child(5){
+            background-color:rgba(153, 50, 204, 0.5);
+            color:rgba(153, 50, 204, 9.5);
+        }
+    }
+}

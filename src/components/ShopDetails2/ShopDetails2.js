@@ -32,7 +32,7 @@ const ShopDetails2 = () => {
                         <div className="row1__half2">
                             <h3>Headlamp Gx Q460 2021</h3>
                             <div className="countdown">
-                            <Countdown date={Date.now() + 5000000000}>
+                            <Countdown date={Date.now() + 1250000000}>
      
                             </Countdown>
                            </div>
@@ -61,7 +61,7 @@ const ShopDetails2 = () => {
                         <div className="row1__half2">
                             <h3>Headlamp Gx Q460 2021</h3>
                             <div className="countdown">
-                            <Countdown date={Date.now() + 5000000000}>
+                            <Countdown date={Date.now() + 1250000000}>
      
                             </Countdown>
                            </div>
@@ -90,7 +90,7 @@ const ShopDetails2 = () => {
                         <div className="row1__half2">
                             <h3>Headlamp Gx Q460 2021</h3>
                             <div className="countdown">
-                            <Countdown date={Date.now() + 5000000000}>
+                            <Countdown date={Date.now() + 1250000000}>
      
                             </Countdown>
                            </div>
@@ -119,7 +119,7 @@ const ShopDetails2 = () => {
                         <div className="row1__half2">
                             <h3>Headlamp Gx Q460 2021</h3>
                             <div className="countdown">
-                            <Countdown date={Date.now() + 5000000000}>
+                            <Countdown date={Date.now() + 1250000000}>
      
                             </Countdown>
                            </div>
@@ -148,7 +148,7 @@ const ShopDetails2 = () => {
                         <div className="row1__half2">
                             <h3>Headlamp Gx Q460 2021</h3>
                             <div className="countdown">
-                            <Countdown date={Date.now() + 5000000000}>
+                            <Countdown date={Date.now() + 1250000000}>
      
                             </Countdown>
                            </div>
@@ -177,7 +177,7 @@ const ShopDetails2 = () => {
                         <div className="row1__half2">
                             <h3>Headlamp Gx Q460 2021</h3>
                             <div className="countdown">
-                            <Countdown date={Date.now() + 5000000000}>
+                            <Countdown date={Date.now() + 1250000000}>
      
                             </Countdown>
                            </div>
