@@ -40,7 +40,7 @@
            margin:7px 0px;
            border:none;
            
-           border-right:2px solid rgb(218, 213, 213);
+           border-right:2px solid #dedede;
            outline:none;
            
        }
@@ -178,9 +178,9 @@
                 border-right:3px solid #f7f7f7;
             }
             p:nth-child(1){
-               /**
+               
                 border-bottom:5px solid #3eb738;
-                */
+                
                 
                 margin-right:20px;
                 .new-price{
@@ -189,19 +189,30 @@
                 }
                 .old-price{
                     text-decoration: line-through;
+                    margin-left:-30px;
                 }
             }
             p:nth-child(2){
                 border-left:2px solid red;
-                /*
+               
                 border-bottom: 5px solid #00acf3;
-                */
+                
                 width:calc(100% - 2px);
+                padding-bottom: 110px !important;
                 cursor: pointer;
             }
             a{
                 text-decoration: none;
                 color:#333;
+                p{
+                    border-left:1px solid #f7f7f7;
+               
+                border-bottom: 5px solid #00acf3 !important;
+                
+                width:calc(100% - 2px);
+                padding-bottom: 10px !important;
+                cursor: pointer;
+                }
                 
 
             }

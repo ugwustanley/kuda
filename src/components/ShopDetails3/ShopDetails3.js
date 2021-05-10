@@ -97,7 +97,7 @@ const ShopDetails3 = () => {
                     </div>
                     <div className="row2">
                           <p className="price1"><span   className="old-price"><Naira>360</Naira></span><span className="new-price"><Naira>200</Naira></span></p>
-                        <Link to="/recurr">  <p>Pay later accepted</p> </Link>
+                        <Link to="/recurr">  <p className="">Pay later accepted</p> </Link>
                       </div>
 
 

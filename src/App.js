@@ -1,6 +1,7 @@
 import React from 'react';
 import Main from './components/Main/Main'
 import AdminDash from './components/AdminDash/AdminDash'
+import OrgDash from './components/OrgDash/OrgDash'
 import {Link , BrowserRouter as Router  , Route , useHistory, withRouter} from 'react-router-dom'
 import './App.css'
 
@@ -12,7 +13,8 @@ class App extends React.Component{
         <div className="app">
           
             <Route exact path="/admindash" component={AdminDash}/>
-            {this.props.location.pathname === "/admindash"? <p></p> : <Main />}
+            <Route exact path="/orgdash" component={OrgDash}/>
+            {this.props.location.pathname === "/admindash" || "/orgdash" ? <p></p> : <Main />}
             
          
           

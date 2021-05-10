@@ -3,7 +3,7 @@ import Naira from 'react-naira'
 import {useHistory , Link} from 'react-router-dom'
 import Countdown from 'react-countdown'
 import Spare from './images/spare.jpg'
-import {CaretLeft, MapPin , ArrowRight} from 'phosphor-react'
+import {CaretLeft, MapPin , ArrowRight , ArrowLeft , MagnifyingGlass , PhoneCall} from 'phosphor-react'
 import './ShopDetails.scss'
 
 const ShopDetails = () => {
@@ -49,14 +49,14 @@ console.log(sec)
                 <h5>Category</h5>
             </div>
             <div className="search-section">
-                 <input name="search" type="text" className="search" id="search"  placeholder="Search for a product 1" />
-                 <input name="search" value="Search" type="submit" className="search-btn" id="search-btn" />
+               <span><ArrowLeft size={23} weight="regular" /> </span>
+                 <input name="search" type="text" className="search" id="search"  placeholder="Search for a product" />
+                 <span  className="search-btn"><MagnifyingGlass size={23} weight="regular" /></span>
              </div>
-        
-              
-          <div className="ShopDetails__items">
+          
+          <div className="ShopDetails3__items">
 
-          <div className="ShopDetails__item">
+          <div className="ShopDetails3__item">
                     
                     <div className="row1">
 
@@ -86,69 +86,25 @@ console.log(sec)
           </div>
                            </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
-                            <h1><Naira>36000</Naira></h1>
-                           <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
-                      </div>
-
-                     
-
-                    </div>
-                    <div className="row2">
-                          <p>Show Contact</p>
-                          <p>Pay later accepted</p>
-                      </div>
-
-
-               </div>
-
-
-               <div className="ShopDetails__item">
-                    
-                    <div className="row1">
-
-                        <img className="image" src={Spare}></img>
-                        <div className="row1__half2">
-                            <h3>Headlamp Gx Q460 2021</h3>
-                            <div className="countdown">
-                            <div  className="timer">
-             <div className="days">
-                <h5>{days}</h5>
-                <h6>Days</h6>
-             </div>
-
-             <div className="days">
-                <h5>{hr}</h5>
-                <h6>Hours</h6>
-             </div>
-
-             <div className="days">
-                <h5>{min}</h5>
-                <h6>Minutes</h6>
-             </div>
-             <div className="days">
-                <h5>{sec}</h5>
-                <h6>Seconds</h6>
-             </div>
-          </div>
-                           </div>
-                            <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
-                            <h1><Naira>360000</Naira></h1>
+                          <div className="cta-all"> <h1><span><PhoneCall size={15} /></span>Contact</h1>
                             <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
                       </div>
+                      </div> 
 
                      
 
                     </div>
                     <div className="row2">
-                          <p>Show Contact</p>
-                          <p>Pay later accepted</p>
+                          <p className="price1"><span   className="old-price"><Naira>360</Naira></span><span className="new-price"><Naira>200</Naira></span></p>
+                        <Link to="/recurr">  <p className="">Pay later accepted</p> </Link>
                       </div>
 
 
                </div>
 
 
-               <div className="ShopDetails__item">
+
+               <div className="ShopDetails3__item">
                     
                     <div className="row1">
 
@@ -178,23 +134,24 @@ console.log(sec)
           </div>
                            </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
-                            <h1><Naira>36000</Naira></h1>
+                          <div className="cta-all"> <h1><span><PhoneCall size={15} /></span>Contact</h1>
                             <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
                       </div>
+                      </div> 
 
                      
 
                     </div>
                     <div className="row2">
-                          <p>Show Contact</p>
-                          <p>Pay later accepted</p>
+                          <p className="price1"><span   className="old-price"><Naira>360</Naira></span><span className="new-price"><Naira>200</Naira></span></p>
+                        <Link to="/recurr">  <p>Pay later accepted</p> </Link>
                       </div>
 
 
                </div>
 
 
-               <div className="ShopDetails__item">
+               <div className="ShopDetails3__item">
                     
                     <div className="row1">
 
@@ -224,23 +181,23 @@ console.log(sec)
           </div>
                            </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
-                            <h1><Naira>36000</Naira></h1>
+                          <div className="cta-all"> <h1><span><PhoneCall size={15} /></span>Contact</h1>
                             <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
                       </div>
+                      </div> 
 
                      
 
                     </div>
                     <div className="row2">
-                          <p>Show Contact</p>
-                          <p>Pay later accepted</p>
+                          <p className="price1"><span   className="old-price"><Naira>360</Naira></span><span className="new-price"><Naira>200</Naira></span></p>
+                        <Link to="/recurr">  <p>Pay later accepted</p> </Link>
                       </div>
 
 
                </div>
 
-
-               <div className="ShopDetails__item">
+               <div className="ShopDetails3__item">
                     
                     <div className="row1">
 
@@ -270,23 +227,23 @@ console.log(sec)
           </div>
                            </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
-                            <h1><Naira>36000</Naira></h1>
+                          <div className="cta-all"> <h1><span><PhoneCall size={15} /></span>Contact</h1>
                             <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
                       </div>
+                      </div> 
 
                      
 
                     </div>
                     <div className="row2">
-                          <p>Show Contact</p>
-                          <p>Pay later accepted</p>
+                          <p className="price1"><span   className="old-price"><Naira>360</Naira></span><span className="new-price"><Naira>200</Naira></span></p>
+                        <Link to="/recurr">  <p>Pay later accepted</p> </Link>
                       </div>
 
 
                </div>
 
-
-               <div className="ShopDetails__item">
+               <div className="ShopDetails3__item">
                     
                     <div className="row1">
 
@@ -316,20 +273,27 @@ console.log(sec)
           </div>
                            </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
-                            <h1><Naira>36000</Naira></h1>
+                          <div className="cta-all"> <h1><span><PhoneCall size={15} /></span>Contact</h1>
                             <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
                       </div>
+                      </div> 
 
                      
 
                     </div>
                     <div className="row2">
-                          <p>Show Contact</p>
-                          <p>Pay later accepted</p>
+                          <p className="price1"><span   className="old-price"><Naira>360</Naira></span><span className="new-price"><Naira>200</Naira></span></p>
+                        <Link to="/recurr">  <p>Pay later accepted</p> </Link>
                       </div>
 
 
                </div>
+
+
+
+
+
+
 
 
 
