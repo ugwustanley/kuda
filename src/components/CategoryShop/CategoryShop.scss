@@ -1,0 +1,17 @@
+select{
+    grid-column: 1/3;
+    display: block;
+    width:calc(100% + 2px);
+    font-weight: 500;
+    border:none;
+    height:40px;
+    background: #fff;
+    border:1px solid gray;
+    border-radius: 7px;
+    padding:0px 10px;
+    outline: none;
+    margin-top:20px;
+    margin-bottom:0px;
+    color:gray;
+   
+}

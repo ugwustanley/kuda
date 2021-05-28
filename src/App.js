@@ -14,7 +14,7 @@ class App extends React.Component{
           
             <Route exact path="/admindash" component={AdminDash}/>
             <Route exact path="/orgdash" component={OrgDash}/>
-            {this.props.location.pathname === "/admindash" || "/orgdash" ? <p></p> : <Main />}
+            {this.props.location.pathname === "/admindash" || this.props.location.pathname === "/orgdash" ? <p></p> : <Main />}
             
          
           

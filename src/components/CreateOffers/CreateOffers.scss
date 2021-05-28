@@ -1,0 +1,64 @@
+.CreateOffers{
+    
+    select{
+        grid-column: 1/3;
+        display: block;
+        width:calc(100% + 2px);
+        font-weight: 500;
+        border:none;
+        height:40px;
+        background: #fff;
+        border:1px solid gray;
+        border-radius: 7px;
+        padding:0px 10px;
+        outline: none;
+        margin-top:40px;
+        margin-bottom:0px;
+        color:gray;
+       
+    }
+    input, textarea{
+        display: block;
+        width:calc(100% - 20px);
+        font-weight: 500;
+        border:none;
+        //height:40px;
+        background: #fff;
+        border:1px solid gray;
+        border-radius: 7px;
+        padding:10px 10px;
+        outline: none;
+        margin-top:20px;
+        &::placeholder{
+            color:gray;
+        }
+    }
+    p{
+        font-weight: 600;
+        font-size: 13px;
+        margin-bottom:-15px;
+        margin-top:25px;
+    }
+    .create-btn{
+        cursor:pointer;
+        grid-column: 1/3;
+        display:block;
+        width:calc(100%);
+        height:45px;
+        background: #301a96;
+        margin:auto;
+        margin-top:30px;
+        border-radius: 8px;
+        border:none;
+        color:#fff !important;
+        font-size: 12px;
+        font-weight: 600;
+       
+    }
+    .warning{
+        color:tomato;
+        font-size: 11px;
+        margin:0px;
+        margin-top:10px;
+    }
+}

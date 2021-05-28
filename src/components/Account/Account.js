@@ -123,6 +123,16 @@ const Account = () => {
             <div className="logout group">
               
                <div className="link logout">
+               <Link to="/switchorg">
+                        <p>Convert to organization</p>
+                    </Link>
+                    <div className="arrow-right">
+                        <Link to="/switchorg">
+                            <CaretRight size={20} weight="bold" />
+                        </Link>
+                    </div>
+                   
+               
                     <p>Logout</p>
                     <div className="arrow-right">
                        <CaretRight size={20} weight="bold" />

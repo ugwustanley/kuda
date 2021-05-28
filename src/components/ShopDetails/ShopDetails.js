@@ -1,12 +1,19 @@
-import React,{useState} from 'react'
+import React,{useState , useContext} from 'react'
 import Naira from 'react-naira'
 import {useHistory , Link} from 'react-router-dom'
 import Countdown from 'react-countdown'
 import Spare from './images/spare.jpg'
-import {CaretLeft, MapPin , ArrowRight , ArrowLeft , MagnifyingGlass , PhoneCall} from 'phosphor-react'
+import {QueueContext} from '../../Contexts/queueContext'
+import {CaretLeft, MapPin, ShoppingCart , ArrowRight , ArrowLeft , MagnifyingGlass , PhoneCall} from 'phosphor-react'
 import './ShopDetails.scss'
 
 const ShopDetails = () => {
+
+   const [queue , setQueue] = useContext(QueueContext)
+
+
+    let totalQueue = queue.length || 0
+
     let history =  useHistory()
     const [show , setShow] = useState(false)
     const [sec , setSec] = useState(0)
@@ -14,8 +21,9 @@ const ShopDetails = () => {
     const [hr , setHr] = useState(0)
     const [days , setDays] = useState(0)
    
+   
     
-    const interval = setInterval(() => {
+    let timeinterval = setInterval(() => {
         let date = new Date()
         let day = date.getDate()
         let hour = date.getHours()
@@ -31,14 +39,26 @@ const ShopDetails = () => {
             setHr(rehour)
             setDays(redays)
             
-            console.log( redays , rehour , reminute , reseconds)
-             if(redays === 0 && rehour === 0 && reminute === 0 && reseconds === 0 ){
-                 clearInterval(interval)
+          
+             if(redays <= 0 ){
+                 stopTImer() 
+                 
              }
         }
     } , 1000)
 
-console.log(sec)
+   function stopTImer(){
+
+      if( days < 0){
+
+      //console.log(days)
+      }
+   }
+
+   stopTImer()
+      
+   
+
 
     return (
         <div className="ShopDetails">
@@ -47,6 +67,13 @@ console.log(sec)
                         <CaretLeft size={20} weight="bold" />           
                  </div>
                 <h5>Category</h5>
+
+                <div className="shopping__cart">
+                <Link to="/queue">
+                <ShoppingCart size={20} />
+                <span>{totalQueue}</span>
+                </Link>
+                </div>
             </div>
             <div className="search-section">
                <span><ArrowLeft size={23} weight="regular" /> </span>
@@ -87,7 +114,7 @@ console.log(sec)
                            </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                           <div className="cta-all"> <h1><span><PhoneCall size={15} /></span>Contact</h1>
-                            <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
+                            <Link to="/productdetail"> <button className="btn btn2">Buy now</button></Link>
                       </div>
                       </div> 
 
@@ -96,7 +123,7 @@ console.log(sec)
                     </div>
                     <div className="row2">
                           <p className="price1"><span   className="old-price"><Naira>360</Naira></span><span className="new-price"><Naira>200</Naira></span></p>
-                        <Link to="/recurr">  <p className="">Pay later accepted</p> </Link>
+                        <Link to="/recurr">  <p onClick={(e) => e.preventDefault()} className="">Pay later accepted</p> </Link>
                       </div>
 
 
@@ -135,7 +162,7 @@ console.log(sec)
                            </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                           <div className="cta-all"> <h1><span><PhoneCall size={15} /></span>Contact</h1>
-                            <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
+                            <Link to="/productdetail"> <button className="btn btn2">Buy now</button></Link>
                       </div>
                       </div> 
 
@@ -144,7 +171,7 @@ console.log(sec)
                     </div>
                     <div className="row2">
                           <p className="price1"><span   className="old-price"><Naira>360</Naira></span><span className="new-price"><Naira>200</Naira></span></p>
-                        <Link to="/recurr">  <p>Pay later accepted</p> </Link>
+                        <Link to="/recurr">  <p onClick={(e) => e.preventDefault()}>Pay later accepted</p> </Link>
                       </div>
 
 
@@ -182,7 +209,7 @@ console.log(sec)
                            </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                           <div className="cta-all"> <h1><span><PhoneCall size={15} /></span>Contact</h1>
-                            <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
+                            <Link to="/productdetail"> <button className="btn btn2">Buy now</button></Link>
                       </div>
                       </div> 
 
@@ -191,7 +218,7 @@ console.log(sec)
                     </div>
                     <div className="row2">
                           <p className="price1"><span   className="old-price"><Naira>360</Naira></span><span className="new-price"><Naira>200</Naira></span></p>
-                        <Link to="/recurr">  <p>Pay later accepted</p> </Link>
+                        <Link to="/recurr">  <p onClick={(e) => e.preventDefault()}>Pay later accepted</p> </Link>
                       </div>
 
 
@@ -228,7 +255,7 @@ console.log(sec)
                            </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                           <div className="cta-all"> <h1><span><PhoneCall size={15} /></span>Contact</h1>
-                            <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
+                            <Link to="/productdetail"> <button className="btn btn2">Buy now</button></Link>
                       </div>
                       </div> 
 
@@ -237,7 +264,7 @@ console.log(sec)
                     </div>
                     <div className="row2">
                           <p className="price1"><span   className="old-price"><Naira>360</Naira></span><span className="new-price"><Naira>200</Naira></span></p>
-                        <Link to="/recurr">  <p>Pay later accepted</p> </Link>
+                        <Link to="/recurr">  <p onClick={(e) => e.preventDefault()}>Pay later accepted</p> </Link>
                       </div>
 
 
@@ -274,7 +301,7 @@ console.log(sec)
                            </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                           <div className="cta-all"> <h1><span><PhoneCall size={15} /></span>Contact</h1>
-                            <Link to="/comingsoon"> <button className="btn btn2">Buy now</button></Link>
+                            <Link to="/productdetail"> <button className="btn btn2">Buy now</button></Link>
                       </div>
                       </div> 
 
@@ -283,7 +310,7 @@ console.log(sec)
                     </div>
                     <div className="row2">
                           <p className="price1"><span   className="old-price"><Naira>360</Naira></span><span className="new-price"><Naira>200</Naira></span></p>
-                        <Link to="/recurr">  <p>Pay later accepted</p> </Link>
+                        <Link to="/recurr">  <p onClick={(e) => e.preventDefault()}>Pay later accepted</p> </Link>
                       </div>
 
 

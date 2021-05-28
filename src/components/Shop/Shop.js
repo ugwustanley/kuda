@@ -7,7 +7,9 @@ import Phone from './images/phone.png'
 import Laptop from './images/laptop.jpg'
 import Chair from './images/chair.jpg'
 import Beauty from './images/beauty.jpg'
+import Crowd from './images/crowd2.jpg'
 import Dress from './images/dress.jpg'
+import Health from './images/health.jpg'
 import Sports from './images/book.jpg'
 import Transport from './images/transport.png'
 import Services from './images/services3.png'
@@ -15,7 +17,7 @@ import Jobs from './images/shows.jpg'
 import  Babies from './images/babies.jpg'
 import Pets from './images/pets.jpg'
 import Food from './images/food.jpg'
-import {CaretLeft , Plus  } from 'phosphor-react'
+import {CaretLeft , Plus , ArrowLeft , MagnifyingGlass } from 'phosphor-react'
 import "./Shop.scss"
 
 const Shop = () => {
@@ -29,15 +31,17 @@ const Shop = () => {
                  </div>
                 <h5>Shop</h5>
             </div>
-             <div className="search-section">
-                 <input name="search" type="text" className="search" id="search"  placeholder="Enter #Randnumber or select category below" />
-                 <input name="search" value="Search" type="submit" className="search-btn" id="search-btn" />
+
+            <div className="search-section">
+               <span><ArrowLeft size={23} weight="regular" /> </span>
+                 <input name="search" type="text" className="search" id="search"  placeholder="Search for a product" />
+                 <span  className="search-btn"><MagnifyingGlass size={23} weight="regular" /></span>
              </div>
 
              <div className="shop__categories">
                <Link to="/shopdetails">
                   <div className="category category1">
-                      <div  >
+                     <div  >
                          <img src={Hotel}></img>
                       </div>
                       <p>Hotels & Lodges</p>
@@ -46,11 +50,12 @@ const Shop = () => {
                   <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
-                        <img style={{transform:"scale(1.4)"}} src={Vehicle}></img>
+                        <img  style={{transform:"scaleX(1.50) scaleY(1.4) translateY(0px)", zIndex:"1"}} src={Crowd}></img>
                       </div>
-                      <p>Automobiles</p>
+                      <p>Business crowd funding</p>
                   </div>
                   </Link>
+                 
 
                   <Link to="/shopdetails">
                   <div className="category category1">
@@ -90,9 +95,9 @@ const Shop = () => {
                   <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
-                        <img src={Beauty}></img>
+                        <img style={{transform:"scale(1.7)"}} src={Health}></img>
                       </div>
-                      <p>Health & Beauty</p>
+                      <p>Healthcare</p>
                   </div>
                   </Link>
 
@@ -101,7 +106,7 @@ const Shop = () => {
                       <div  >
                         <img  style={{transform:"scale(.9)"}} src={Dress}></img>
                       </div>
-                      <p>Fashion</p>
+                      <p>Fashion & Beauty</p>
                   </div>
                   </Link>
 
@@ -153,9 +158,9 @@ const Shop = () => {
                   <Link to="/shopdetails">
                   <div className="category category1">
                       <div  >
-                        <img  style={{transform:"scale(1.4)"}} src={Pets}></img>
+                        <img style={{transform:"scale(1.4)"}} src={Vehicle}></img>
                       </div>
-                      <p>Animals & Pets</p>
+                      <p>Automobiles</p>
                   </div>
                   </Link>
 

@@ -9,11 +9,14 @@ import Rewards from '../Rewards/Rewards'
 import CategoryTwo from '../CategoryTwo/Category'
 import Bonuses from '../Bonuses/Bonuses'
 import Loading from '../Loading/Loading'
+import ShopDetailsHotel from '../ShopDetailsHotel/ShopDetailsHotel'
 import Balance from '../Balance/Balance'
 import Cashback from  '../Cashback/Cashback'
 import Paypage from '../Paypage/Paypage'
 import Vendor from '../Vendor/Vendor'
 import Failed from '../Failed/Failed'
+import ProductDetail2 from '../ProductDetail2/ProductDetail2'
+import SwitchOrg from '../SwitchOrg/SwitchOrg'
 import AddVehicle from '../AddVehicle/AddVehicle'
 import Sales from '../Sales/Sales'
 import Success from '../Success/Success'
@@ -40,12 +43,14 @@ import Signup from "../Signup/Signup"
 import ShopDetails3 from '../ShopDetails3/ShopDetails3'
 import Admin from '../Admin/Admin'
 import Adminorg from '../Adminorg/Adminorg'
+import Queue from '../Queue/Queue'
 import Request from '../Request/Request'
 import ComingSoon from '../ComingSoon/ComingSoon'
 import Book from '../Book/Book'
 import CreateShop from '../CreateShop/CreateShop'
 import BookMec from '../BookMec/BookMec'
 import Display from '../Display/Display'
+import ProductDetail from '../ProductDetail/ProductDetail'
 import Settings from '../Settings/Settings'
 import Updatekyc from '../Updatekyc/UpdateKyc'
 import Withdraw from '../Withdraw/Withdraw'
@@ -64,13 +69,18 @@ const Main = () => {
                 <Route exact path='/'  component={Home} />
                 <Route exact path='/payments'  component={Payments} />
                 <Route exact path='/budget'  component={Budget} />
+                <Route exact path='/SwitchOrg'  component={SwitchOrg} />
                 <Route exact path='/card' component={Cards} />
                 <Route exact path='/comingsoon' component={ComingSoon } />
                 <Route exact path='/more' component={More} />
+                <Route exact path='/queue' component={Queue} />
+                <Route exact path='/productdetail' component={ProductDetail} />
+                <Route exact path='/shopdetailshotel' component={ShopDetailsHotel} />
                 <Route exact path='/createshop' component={CreateShop} />
                 <Route exact path='/kin' component={Kin} />
                 <Route exact path='/display1' component={Display} />
                 <Route exact path="/addbank" component={Addbank} />
+                <Route exact path="/productdetail2" component={ProductDetail2} />
                 <Route exact path='/login' component={Login} />
                 <Route exact path='/routine' component={Routine} />
                 <Route exact path='/expense' component={Expense} />

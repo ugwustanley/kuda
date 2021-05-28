@@ -1,0 +1,87 @@
+  
+    .Dashboard__cards{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:5px;
+       .Dashboard__card{
+           width:calc(100% - 24px);
+           height:80px;
+           padding:10px;
+           background-color: #fff;
+           border-radius: 0px;
+           h5{
+               opacity: .28;
+               margin:0;
+               margin-top:15px;
+           }
+           h2{
+              font-size: 20px;
+              margin:0;
+              margin-top:10px;
+           }
+       }
+   }
+   .offering{
+       margin-top:40px;
+   }
+   .Dashboard__products{
+       padding:5px 10px;
+       padding-bottom:40px;
+       background-color: #fff;
+       margin:20px 0;
+
+       .Dashboard__product{
+           display:grid;
+           grid-template-columns: 40px 1fr 50px 50px 50px;
+           border-bottom: 2px solid #f7f7f7;
+           align-items: center;
+           min-height:40px;
+           padding-bottom: 2px;
+           margin-top:30px;
+           img{
+               width:25px;
+               height:25px;
+               border-radius: 50%;
+               object-fit: contain;
+              
+           }
+           div{
+               h4{
+                   margin:0;
+                   font-size: 12px;
+               }
+               p{
+                   margin:0;
+                   font-size: 10px;
+                   opacity: .38;
+               }
+           }
+           .btn{
+               font-weight: 500;
+               font-size: 10px;
+               cursor: pointer;
+           }
+           .edit{
+               outline:none;
+               border:none;
+               background-color: transparent;
+               border:2px solid #f7f7f7;
+               border-radius: 5px;
+               padding: 4px 8px;
+           }
+           .stop{
+               background-color: black;
+               color:#fff;
+           }
+           .delete{
+               outline:none;
+               border:none;
+               background-color: transparent;
+               border-radius: 5px;
+               padding: 4px 4px;
+               background-color: rgb(216, 47, 47);
+               color:#fff;
+               margin-left:2px;
+           }
+       }
+   }

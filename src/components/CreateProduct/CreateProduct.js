@@ -46,30 +46,32 @@ const CreateProduct = () => {
 
                  <input name="sell" type="text" defaultValue="" id="sell" class="sell" placeholder="Unit price" />
 
-                 <input name="quality" type="text" defaultValue="" id="quailty" class="quality" placeholder="Quality" />
+                 <input name="quality" type="text" defaultValue="" id="quantity" class="quantity" placeholder="Quantity" />
 
                  <input name="discount" type="text" defaultValue="" id="discount" class="discount" placeholder="Discount" />
 
-                 <select defaultValue="category">
-                    <option disabled value="category">Category</option>
-                    <option value="Hotels & Lodges">Hotels & Lodges</option>
-                    <option value="Automobiles">Automobiles</option>
-                    <option value="Real estate">Real estate</option>
-                    <option value="Mobile Phones & Tablets">Mobile Phones & Tablets</option>
-                    <option value="Electronics">Electronics</option>
-                    <option value="Furniture & Home appliances">Furniture & Home appliances</option>
-                    <option value="Health & Beauty">Health & Beauty</option>
-                    <option value="Fashion">Fashion</option>
-                    <option value="Arts, Books & Digital content">Arts, Books & Digital content</option>
-                    <option value="Transport & Logistics">Transport & Logistics</option>
-                    <option value="Services">Services</option>
-                    <option value="Shows & Entertainment">Shows & Entertainment</option>
-                    <option value="Babies & Kids">Babies & Kids</option>
-                    <option value="Animals & Pets">Animals & Pets</option>
-                    <option value="Agriculture & Food">Agriculture & Food</option>
+                 <select class="pay-later" DefaultValue="Pay later limit">
+                     <option value="Pay later limit">Pay later limit</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                     <option value="9">9</option>
+
                  </select>
 
-                 <input name="save" type="submit" value="CREATE PRODUCT" id="save" class="save" />
+                 <select class="pay-later" DefaultValue="Pay later cycle">
+                     <option value="Pay later cycle">Pay later cycle</option>
+                     <option value="Daily">Daily</option>
+                     <option value="Weekly">Weekly</option>
+                     <option value="Monthly">Monthly</option>
+                 </select>
+ 
+
+                 <input name="save" type="submit" value="CREATE OFFER" id="save" class="save" />
             </form>
 
    
@@ -77,4 +79,4 @@ const CreateProduct = () => {
     )
 }
 
-export default CreateProduct
+export default CreateProduct;

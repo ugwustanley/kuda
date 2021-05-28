@@ -1,26 +1,14 @@
-import React,{useState , useEffect} from 'react'
+import React,{useState} from 'react'
 import {useHistory , Link} from 'react-router-dom'
-import queryString from 'query-string'
 import {CaretLeft} from 'phosphor-react'
 import './Pay.scss'
 
-const Pay = ({ location }) => {
-
-    let query = queryString.parse(location.search)
-
-    
-
+const Pay = () => {
     let history =  useHistory()
     const [show , setShow] = useState(false)
     const [ accname , setAccname] = useState("")
     const [ acc , setAcc] = useState("")
     const [ isfilled , setIsfilled] = useState(true)
-
-    useEffect(() => {
-      if(query){
-        setAcc(query.amount)
-      }
-    }, [query])
 
     const handleValidation = (e) =>{
       if(accname === "" || acc === "" ) {
@@ -43,10 +31,7 @@ const Pay = ({ location }) => {
                  <input name="Phone" onChange={(e) => setAccname(e.target.value)} type="text" defaultValue="" id="Phone" className={isfilled === false ? `fail phone` :`phone` }  />
 
                  <label for="amount">Amount</label>
-                 {query.amount?
-                  <input disabled name="amount" value={acc} onChange={(e) => setAcc(e.target.value)} type="tel" defaultValue="" id="amount" className={isfilled === false ? `fail amount` :` amount` }  />
-                :
-                <input name="amount" value={acc} onChange={(e) => setAcc(e.target.value)} type="tel" defaultValue="" id="amount" className={isfilled === false ? `fail amount` :` amount` }  />}
+                 <input name="amount" onChange={(e) => setAcc(e.target.value)} type="tel" defaultValue="" id="amount" className={isfilled === false ? `fail amount` :` amount` }  />
 
                  <input onClick={ (e) => handleValidation(e)}name="save" type="submit" value="Send" id="save" className="save"/>
             </form>

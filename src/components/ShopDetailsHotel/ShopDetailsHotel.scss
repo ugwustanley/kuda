@@ -1,4 +1,4 @@
-.ShopDetails{
+.ShopDetailsHotel{
     padding:0px 10px;
     padding-bottom:50px;
     background-color: #f7f7f7;
@@ -20,16 +20,6 @@
             grid-column: 1/2;
             cursor: pointer;
             margin-right:auto;
-        }
-        .shopping__cart{
-            grid-column: 3/4;
-            margin-left:auto;
-            margin-right:0;
-            span{
-                font-size: 11px;
-                font-weight: 800;
-                color:green;
-            }
         }
     }
     .search-section{
@@ -287,8 +277,4 @@
             text-align: center;
         }
     }
-}
-a{
-    text-decoration: none;
-    color:inherit;
 }
