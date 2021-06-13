@@ -27,6 +27,20 @@
             margin-right:auto;
         }
     }
+    .upgrade{
+        outline:none;
+        border:none;
+        background-color:green;
+        color:#fff;
+        border-radius: 8px;
+        display:block;
+        cursor:pointer;
+        float:right;
+        margin-top:20px;
+        margin-right:4px;
+        font-size: 12px;
+        padding:5px 12px;
+    }
     .tabs{
         display:grid;
         grid-template-columns: 1fr 1fr;

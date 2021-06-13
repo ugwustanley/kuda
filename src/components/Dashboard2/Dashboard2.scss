@@ -1,6 +1,9 @@
-.ProductDetail2{
+.Dashboard2{
     padding:0px 10px;
-    margin-bottom:40px;
+    padding-bottom:50px;
+    background-color: #f7f7f7;
+    font-family: 'Mulish', sans-serif;
+    min-height: 100vh;
     a{
         text-decoration: none;
         color:inherit;
@@ -11,135 +14,60 @@
         align-items: center;
         border-bottom: 1px solid #dedede;
         padding-bottom:10px;
-        margin-bottom:50px;
+        margin-bottom:30px;
         height:40px;
         h5{
             grid-column: 2/3;
             font-size: 14px;
             margin-right:20px;
-            text-align:center;
         }
         div{
             grid-column: 1/2;
             cursor: pointer;
             margin-right:auto;
         }
-        .shopping__cart{
-            grid-column: 3/4;
-            margin-left:auto;
-            margin-right:0;
-            span{
-                font-size: 11px;
-                font-weight: 800;
-                color:green;
-            }
-        }
     }
-    &__info{
-
-        .shopimg__box{
-              width:calc(100% - 0px);
-              border-radius: 20px;
-              margin:auto;
-              height:300px;
-              z-index:2;
-            img{
-                width:100%;
-                height:100%;
-                border-radius: 20px;
-                z-index:-1;
-                object-fit: cover;
-            }
-        }
-        .shop__products{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            h3{
-                font-size: 13px;
-            }
-            .price-tag{
-                font-size: 12px;
-                font-weight: 700;
-            }
-            .new-price{
-                color:#3eb738;
-                margin-left:3px;
-            }
-            .old-price{
-                text-decoration: line-through;
-                
-            }
-        }
-      
-       
-    }
-    .product__desc{
-        h2{
-          font-size: 16px;
-        }
-        p{
-          font-size: 14px;
-          text-align: justify;
-          font-weight: 600;
-          color:rgba(8, 8, 8, 0.719);
-        }
-    }
-    .totals{
-
-        &__price , &__items{
-           display:flex;
-           justify-content:space-between;
-           p{
-               font-size: 14px;
-               font-weight:600;
-           }
-        }
-        &__items{
-
-            p{
-                display:flex;
-                align-items:center;
-                span{
-                    display:block;
-                  
-                    height:15px;
-                    padding:0px 0px;
-                    padding-top:-2px;
-                    font-size:16px;
-                    margin:0 10px;
-                }
-                .add{
-                    cursor: pointer;
-                    padding:0;
-                    margin:0;
-                }
-            }
-        }
-    }
-    .book-btn{
-        cursor:pointer;
-        grid-column: 1/3;
-        display:block;
-        width:calc(100% + 3px);
-        height:45px;
-        background: #301a96;
-        margin:auto;
-        margin-top:30px;
-        border-radius: 8px;
+    .upgrade{
+        outline:none;
         border:none;
-        color:#fff !important;
+        background-color:green;
+        color:#fff;
+        border-radius: 8px;
+        display:block;
+        float:right;
+        margin-top:20px;
+        margin-right:4px;
         font-size: 12px;
-        font-weight: 600;
-       
+        padding:5px 12px;
+    }
+    .tabs{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        padding:0px 10px;
+        p{
+            font-weight: 500;
+            font-size: 14px; 
+            padding-bottom:10px;
+            text-align: center !important;
+        }
+        .manage{
+            
+           
+            text-align: right;
+            margin-right:auto;
+        }
+        .active-tab{
+            border-bottom: 3px solid #301a96;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px; 
+        }
+        .create{
+            text-align: left;
+            margin-left:20px;
+        }
     }
 
-    .paylater{
-        font-weight: 600;
-        font-size: 14px;
-        margin-bottom:-15px;
-        margin-top:10px;
-    }
     .tag__box{
         position: absolute;
         display:grid;
@@ -211,7 +139,6 @@
                 display:block;
                 width:100%;
                 margin-top:10px;
-                cursor:pointer;
                 &:hover{
                     background-color: #301a96;
                     color:#fff;
@@ -229,10 +156,12 @@
         }
     }  
   
+    
 }
+
 .popup{
     width:100%;
-    height:calc(100vh - 0px);
+    height:calc(100vh - 50px);
     overflow:hidden;
     position: absolute;
 }

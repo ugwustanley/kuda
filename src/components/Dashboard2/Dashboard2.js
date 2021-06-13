@@ -2,20 +2,15 @@ import React,{useState} from 'react'
 import {useHistory , Link} from 'react-router-dom'
 import CreatOffers from '../CreateOffers/CreateOffers'
 import {CaretLeft, MapPin, Star ,  ArrowLeft , ArrowRight} from 'phosphor-react'
-import {Line , Bar, Doughnut } from 'react-chartjsx'
 import Manage from '../Manage/Manage'
-import './Dashboard.scss'
+import './Dashboard2.scss'
 
-const Dashboard = () => {
+const Dashboard2 = () => {
     let history =  useHistory()
     const [show , setShow] = useState(false)
     const [deletes , setDeletes] = useState(false)
     const [clicked , setClicked] = useState(true)
     const [manage , setManage] = useState(true)
-    const [data , setData] = useState([42, 83, 39,54,23,42,30])
-    const [labels, setLabels] = useState(["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"])
-    
-  
 
     const setShowEvent = () =>{
 
@@ -26,12 +21,12 @@ const Dashboard = () => {
       setDeletes(true)
     }
     return (
-        <div className={show || deletes ? `Dashboard popup` : `Dashboard`}>
-                   <div className="Dashboard__heading">
+        <div className={show || deletes ? `Dashboard2 popup` : `Dashboard2`}>
+                   <div className="Dashboard2__heading">
          <div onClick={history.goBack} >               
                         <CaretLeft size={20} weight="bold" />           
                  </div>
-                <h5>Dashboard</h5>
+                <h5>Dashboard2</h5>
           </div>
 
           <div className="tabs">
@@ -39,13 +34,12 @@ const Dashboard = () => {
                 <Link><p className={manage === true ? `create`: `create active-tab`} onClick={() =>setManage(false)}>Create Offer</p> </Link> 
           </div>
    
-        <Link to="/dashboard2"> <button className="upgrade">Upgrade</button></Link>
+        <Link to="summary"> <button className="upgrade">Financials</button> </Link>
          { manage === true?
          <Manage setShowEvent={setShowEvent} setDeletesEvent = {setDeletesEvent}/>
          : 
          <CreatOffers />
          }
-      
          { show === false? <p></p>:
            <div className="tag__box" onClick={() => setTimeout(clicked? setClicked(false) : setShow(false) , 1000)} >
            <div className="tag"  onClick={() => setTimeout(() => {setShow(true) ; setClicked(true)} , 0)} >
@@ -67,12 +61,12 @@ const Dashboard = () => {
            <div className="tag__box" onClick={() => setTimeout(clicked? setClicked(false) : (setShow(false) , setDeletes(false)) , 1000)} >
            <div className="tag"  onClick={() => setTimeout(() => {setShow(true); setDeletes(true) ; setClicked(true)} , 0)} >
              
-              <p>This will be permanently deleted from your dashboard</p>
-              <Link to="/dashboard">
+              <p>This will be permanently deleted from your Dashboard2</p>
+              <Link to="/Dashboard2">
                 <button className="proceed">Proceed</button>
               </Link>
 
-              <Link to="/dashboard">
+              <Link to="/Dashboard2">
                 <button className="cancel">cancel</button>
               </Link> 
 
@@ -88,4 +82,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+export default Dashboard2

@@ -6,7 +6,9 @@
     margin:0;
     display:flex;
     overflow: visible !important;
-   
+    @media (max-width:800px){
+        display:none;
+    }
     
  
     

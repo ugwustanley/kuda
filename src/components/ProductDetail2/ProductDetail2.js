@@ -124,7 +124,7 @@ const ProductDetail2 = () => {
               <Link to="/queue">
                 <button className="storeandsocial">Checkout</button>
               </Link> 
-              <Link to="/shopdetails">
+              <Link to="/shop">
                 <button >Shop more items</button>
               </Link>
 

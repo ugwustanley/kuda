@@ -1,0 +1,90 @@
+.TransactionDetail{
+    padding:0px 10px;
+    padding-bottom:20px;
+    background: #f7f7f7;
+    min-height:100vh;
+
+    
+    a{
+        text-decoration:none;
+        color:inherit;
+    }
+    &__heading{
+        display:grid;
+        grid-template-columns: repeat(1fr , 3);
+        align-items: center;
+        border-bottom: 1px solid #dedede;
+        padding-bottom:10px;
+        margin-bottom:50px;
+        height:40px;
+        h5{
+            grid-column: 2/3;
+            font-size: 14px;
+            margin-right:20px;
+            border:none;
+        }
+        div{
+            grid-column: 1/2;
+            cursor: pointer;
+            margin-right:auto;
+        }
+    }
+  div{
+      .date_stamp {
+         text-align: center;
+         border:none;
+      }
+      h3{
+          font-size:23px;
+          font-weight:800;
+          margin-top:40px;
+          margin-bottom:10px;
+      }
+      .receipt_name{
+          padding-bottom:5px;
+          font-size:13px;
+          margin:0;
+          border-bottom:1px solid rgba(117, 116, 116, 0.253);
+      }
+      .input_heading{
+          font-size:12px;
+          font-weight: 700;
+          color:rgb(117, 116, 116);
+          margin-top:50px;
+          margin-bottom:0;
+      }
+     .input_data{
+          margin:0;
+          font-size:14px;
+          margin-top:7px;
+          font-weight: 600;
+          color:rgba(0, 0, 0, 0.822);
+          padding-bottom:5px;
+          border-bottom:1px solid rgba(117, 116, 116, 0.253);
+      }
+      .transaction_from{
+          display:flex;
+          justify-content:space-between;
+          padding-bottom:5px;
+          border-bottom:1px solid rgba(117, 116, 116, 0.253);
+          .transaction_source{
+              border-bottom:none;
+              padding-bottom:0;
+          }
+          .send_icon{
+              background-color:rgba(1, 1, 255, 0.466);
+              width:30px;
+              display:grid;
+              place-content: center;
+              height:30px;
+              margin-left:20px;
+              border-radius:50%;
+          }
+      }
+      .more_actions{
+          margin:0;
+          margin-top:50px;
+      }
+  }
+    
+}

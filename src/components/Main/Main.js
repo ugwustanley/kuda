@@ -20,6 +20,7 @@ import SwitchOrg from '../SwitchOrg/SwitchOrg'
 import AddVehicle from '../AddVehicle/AddVehicle'
 import Sales from '../Sales/Sales'
 import Success from '../Success/Success'
+import TransactionDetail from '../TransactionDetail/TransactionDetail'
 import Cards from '../Cards/Cards'
 import ShopDetails from '../ShopDetails/ShopDetails'
 import Home from '../Home/Home'
@@ -27,9 +28,13 @@ import Dashboard from '../Dashboard/Dashboard'
 import Shop from '../Shop/Shop'
 import Routine from '../Routine/Routine'
 import Category from '../Category/Category'
+import Dashboard2 from '../Dashboard2/Dashboard2'
 import Pay from '../Pay/Pay'
+import Summary from '../Summary/Summary'
+import Rate from '../Rate/Rate'
 import ShopDetails2 from '../ShopDetails2/ShopDetails2'
 import Kin from '../Kin/Kin'
+import Summary2 from '../Summary2/Summary2'
 import CreateProduct from '../CreateProduct/CreateProduct'
 import More from '../More/More'
 import Expense from '../Expense/Expense'
@@ -71,6 +76,8 @@ const Main = () => {
                 <Route exact path='/budget'  component={Budget} />
                 <Route exact path='/SwitchOrg'  component={SwitchOrg} />
                 <Route exact path='/card' component={Cards} />
+                <Route exact path='/summary' component={Summary} />
+                <Route exact path='/summary2' component={Summary2} />
                 <Route exact path='/comingsoon' component={ComingSoon } />
                 <Route exact path='/more' component={More} />
                 <Route exact path='/queue' component={Queue} />
@@ -81,6 +88,8 @@ const Main = () => {
                 <Route exact path='/display1' component={Display} />
                 <Route exact path="/addbank" component={Addbank} />
                 <Route exact path="/productdetail2" component={ProductDetail2} />
+                <Route exact path="/rate" component={Rate} />
+                <Route exact path="/transactionDetail" component={TransactionDetail} />
                 <Route exact path='/login' component={Login} />
                 <Route exact path='/routine' component={Routine} />
                 <Route exact path='/expense' component={Expense} />
@@ -92,6 +101,7 @@ const Main = () => {
                 <Route exact path='/shopdetailstwo' component={ShopDetails2} />
                 <Route exact path='/shopdetailsthree' component={ShopDetails3} />
                 <Route exact path='/dashboard' component={Dashboard} />
+                <Route exact path='/dashboard2' component={Dashboard2} />
                 <Route exact path='/signup' component={Signup} />
                 <Route exact path='/categorytwo' component={CategoryTwo} />
                 <Route exact path='/setting' component={Settings} />

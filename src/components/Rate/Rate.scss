@@ -1,0 +1,114 @@
+
+.Rate{
+    padding:0px 10px;
+    background-color: #f7f7f7;
+    min-height:100vh;
+    padding-bottom:50px;
+    &__heading{
+        display:grid;
+        grid-template-columns: repeat(1fr , 3);
+        align-items: center;
+        border-bottom: 1px solid #dedede;
+        padding-bottom:10px;
+        margin-bottom:50px;
+        height:40px;
+        h5{
+            grid-column: 2/3;
+            font-size: 14px;
+            margin-right:20px;
+        }
+        div{
+            grid-column: 1/2;
+            cursor: pointer;
+            margin-right:auto;
+        }
+    }
+   
+
+.tag__box{
+    position: absolute;
+    display:grid;
+    place-content: center;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    overflow:hidden;
+    width:calc( 100% );
+    margin:0;
+    padding:0;
+    opacity: .999;
+    height:calc(100vh + 35px);
+    
+    background-color:#adb1b6f8;
+ 
+   
+    .tag{
+        background-color: white;
+        width:250px;
+        max-width:calc(100% - 80px) !important;
+        min-height: 130px;
+        padding:10px;
+        padding-bottom:20px;
+        z-index: 99;
+        margin:0px 30px;
+        transform: translateY(-70px) translateX(-7px);
+        border-radius: 20px;
+        opacity:1 ;
+        animation: show .2s ease-in 1;
+        @keyframes show {
+            from {
+                transform: translateY(-360px);
+            }
+            to{
+                 transform:  translateY(-70px);
+            }
+        }
+        h5{
+            color:black;
+            margin-top:10px;
+            font-weight: 700;
+            font-size:15px;
+            text-align: center;
+            
+        }
+        
+        .star__rating{
+            margin:auto;
+            display:flex;
+            justify-content:center;
+            outline:none;
+            button{
+                outline:none;
+            }
+        }
+        button{
+            background-color: #301a96;
+            //#f5f5f5
+            color:#fff;
+            padding: 13px;
+            border:none;
+            border-radius: 10px;
+            margin:auto;
+            display:block;
+            width:100%;
+            margin-top:25px;
+            &:hover{
+                background-color: #301a96;
+                color:#81848d;
+                transition: .2s;
+            }
+        }
+      
+    }
+} 
+.popup{
+    width:100%;
+    height:calc(100vh - 50px);
+    overflow:hidden;
+    position: absolute;
+}
+
+
+   
+      
+}

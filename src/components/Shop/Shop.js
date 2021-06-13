@@ -39,7 +39,7 @@ const Shop = () => {
              </div>
 
              <div className="shop__categories">
-               <Link to="/shopdetails">
+               <Link to="/shopdetails?category=hotel">
                   <div className="category category1">
                      <div  >
                          <img src={Hotel}></img>
@@ -47,7 +47,7 @@ const Shop = () => {
                       <p>Hotels & Lodges</p>
                   </div>
                   </Link>
-                  <Link to="/shopdetails">
+                  <Link to="/shopdetails?category=business">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scaleX(1.50) scaleY(1.4) translateY(0px)", zIndex:"1"}} src={Crowd}></img>
@@ -57,7 +57,7 @@ const Shop = () => {
                   </Link>
                  
 
-                  <Link to="/shopdetails">
+                  <Link to="/shopdetails?category=realestate">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scale(1.4)"}} src={House}></img>
@@ -65,7 +65,7 @@ const Shop = () => {
                       <p>Real estate</p>
                   </div>
                   </Link>
-                  <Link to="/shopdetails">
+                  <Link to="/shopdetails?category=phone">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scale(2)"}} src={Phone}></img>
@@ -74,7 +74,7 @@ const Shop = () => {
                   </div>
                   </Link>
 
-                  <Link to="/shopdetails">
+                  <Link to="/shopdetails?category=electronics">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scale(1.2)"}} src={Laptop}></img>
@@ -83,7 +83,7 @@ const Shop = () => {
                   </div>
                   </Link>
 
-                  <Link to="/shopdetails">
+                  <Link to="/shopdetails?category=furniture">
                   <div className="category category1">
                       <div  >
                         <img src={Chair}></img>
@@ -101,7 +101,7 @@ const Shop = () => {
                   </div>
                   </Link>
 
-                  <Link to="/shopdetails">
+                  <Link to="/shopdetails?category=fashion">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scale(.9)"}} src={Dress}></img>
@@ -110,7 +110,7 @@ const Shop = () => {
                   </div>
                   </Link>
 
-                  <Link to="/shopdetails">
+                  <Link to="/shopdetails?category=arts">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scale(1.1)"}} src={Sports}></img>
@@ -119,7 +119,7 @@ const Shop = () => {
                   </div>
                   </Link>
   
-                  <Link to="/shopdetails">
+                  <Link to="/shopdetails?category=transport">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scale(1.2)"}} src={Transport}></img>
@@ -128,7 +128,7 @@ const Shop = () => {
                   </div>
                   </Link>
 
-                  <Link to="/shopdetails">
+                  <Link to="/shopdetails?category=services">
                   <div className="category category1">
                       <div  >
                         <img src={Services}></img>
@@ -137,7 +137,7 @@ const Shop = () => {
                   </div>
                   </Link>
 
-                  <Link to="/shopdetails">
+                  <Link to="/shopdetails?category=shows">
                   <div className="category category1">
                       <div  >
                         <img  style={{transform:"scale(1.2) translateY(5px)"}} src={Jobs}></img>
@@ -146,7 +146,7 @@ const Shop = () => {
                   </div>
                   </Link>
 
-                  <Link to="/shopdetails">
+                  <Link to="/shopdetails?category=kids">
                   <div className="category category1">
                       <div  >
                         <img src={Babies}></img>
@@ -155,7 +155,7 @@ const Shop = () => {
                   </div>
                   </Link>
 
-                  <Link to="/shopdetails">
+                  <Link to="/shopdetails?category=automobiles">
                   <div className="category category1">
                       <div  >
                         <img style={{transform:"scale(1.4)"}} src={Vehicle}></img>
@@ -164,12 +164,12 @@ const Shop = () => {
                   </div>
                   </Link>
 
-                  <Link to="/shopdetails">
+                  <Link to="/shopdetails?category=food">
                   <div className="category category1">
                       <div  >
                         <img src={Food}></img>
                       </div>
-                      <p>Agriculture & Food</p>
+                      <p>Food, Drinks & Agric produce</p>
                   </div>
                   </Link>
                   

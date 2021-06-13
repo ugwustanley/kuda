@@ -1,5 +1,6 @@
-import React,{useState , useContext} from 'react'
+import React,{useState , useContext , useEffect} from 'react'
 import Naira from 'react-naira'
+import queryString from 'query-string'
 import {useHistory , Link} from 'react-router-dom'
 import Countdown from 'react-countdown'
 import Spare from './images/spare.jpg'
@@ -7,15 +8,28 @@ import {QueueContext} from '../../Contexts/queueContext'
 import {CaretLeft, MapPin, ShoppingCart , ArrowRight , ArrowLeft , MagnifyingGlass , PhoneCall} from 'phosphor-react'
 import './ShopDetails.scss'
 
-const ShopDetails = () => {
+const ShopDetails = ({location}) => {
 
+   let query = queryString.parse(location.search)
    const [queue , setQueue] = useContext(QueueContext)
+   const [path , setPath] = useState("productdetailq2")
+
+   
+   useEffect(() => {
+      if(query && query.category === "hotel"){
+         setPath("productdetail")
+      }else{
+         setPath("productdetail2")
+      }
+   }, [query])
+  
 
 
     let totalQueue = queue.length || 0
 
     let history =  useHistory()
     const [show , setShow] = useState(false)
+  
     const [sec , setSec] = useState(0)
     const [min , setMin] = useState(0)
     const [hr , setHr] = useState(0)
@@ -114,7 +128,7 @@ const ShopDetails = () => {
                            </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                           <div className="cta-all"> <h1><span><PhoneCall size={15} /></span>Contact</h1>
-                            <Link to="/productdetail"> <button className="btn btn2">Buy now</button></Link>
+                            <Link to={`${path}`}> <button className="btn btn2">Buy now</button></Link>
                       </div>
                       </div> 
 
@@ -162,7 +176,7 @@ const ShopDetails = () => {
                            </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                           <div className="cta-all"> <h1><span><PhoneCall size={15} /></span>Contact</h1>
-                            <Link to="/productdetail"> <button className="btn btn2">Buy now</button></Link>
+                            <Link to={`${path}`}> <button className="btn btn2">Buy now</button></Link>
                       </div>
                       </div> 
 
@@ -209,7 +223,7 @@ const ShopDetails = () => {
                            </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                           <div className="cta-all"> <h1><span><PhoneCall size={15} /></span>Contact</h1>
-                            <Link to="/productdetail"> <button className="btn btn2">Buy now</button></Link>
+                            <Link to={`${path}`}> <button className="btn btn2">Buy now</button></Link>
                       </div>
                       </div> 
 
@@ -255,7 +269,7 @@ const ShopDetails = () => {
                            </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                           <div className="cta-all"> <h1><span><PhoneCall size={15} /></span>Contact</h1>
-                            <Link to="/productdetail"> <button className="btn btn2">Buy now</button></Link>
+                            <Link to={`${path}`}> <button className="btn btn2">Buy now</button></Link>
                       </div>
                       </div> 
 
@@ -301,7 +315,7 @@ const ShopDetails = () => {
                            </div>
                             <div className='location'>   <div className="map">   <MapPin color="rgb(148, 144, 144)" size={15} /></div> <p className="locate"> Lagos, Mushin</p></div>
                           <div className="cta-all"> <h1><span><PhoneCall size={15} /></span>Contact</h1>
-                            <Link to="/productdetail"> <button className="btn btn2">Buy now</button></Link>
+                            <Link to={`${path}`}> <button className="btn btn2">Buy now</button></Link>
                       </div>
                       </div> 
 

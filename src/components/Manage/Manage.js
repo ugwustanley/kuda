@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Naira from 'react-naira'
 import CreatOffers from '../CreateOffers/CreateOffers'
+import {Line , Bar, Doughnut } from 'react-chartjsx'
 import {CaretLeft, MapPin, Star ,  ArrowLeft , ArrowRight} from 'phosphor-react'
 import Dress from './images/dress.jpg'
 import Laptop from './images/laptop.jpg'
@@ -10,7 +11,33 @@ import "./Manage.scss"
 
 const Manage = ({setShowEvent , setDeletesEvent}) => {
 
-//    const [btn , setBtn] = useState('Pause')
+     //    const [btn , setBtn] = useState('Pause')
+    const [data , setData] = useState([42, 83, 39,54,23,42,30])
+    const [labels, setLabels] = useState(["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"])
+     
+
+      
+    const [dataset , setDataset] = useState( 
+        [{ 
+      data: data,
+      label: "Daily Sales Number" || "", 
+      borderColor: "rgba(153, 50, 204, 9.5)", 
+      strokeWidth:10,
+      pointBackgroundColor:"rgba(153, 50, 204, 5.5)",
+      fill: true ,
+      borderWidth:1.5,
+     
+      }])
+  
+      const chartOptions = { 
+        maintainAspectRatio:false,
+        aspectRatio:2,
+        responsive:true,
+        beizerCurve:false,
+        pointHitDetectionRadius: 100,
+        datasetStrokeWidth:100,
+    }
+    
 
     const handleBtn = (e) =>{
 
@@ -55,7 +82,16 @@ const Manage = ({setShowEvent , setDeletesEvent}) => {
                        <h2>35</h2>
                 </div>
           </div>
+         <div className="dashboard_chart">
+        <Bar
+         style={{height:'900px'}}
+         width ={800}
+         height = {350}
+         options={chartOptions} 
+         data={{labels: labels , datasets : dataset}} />
+         
 
+        </div>
           <h4 className="offering">Product offerings</h4>
           <div className="Dashboard__products">
               <div className="Dashboard__product">

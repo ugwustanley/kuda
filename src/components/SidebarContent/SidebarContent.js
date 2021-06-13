@@ -7,7 +7,27 @@ const SidebarContent = ({content}) => {
     const [weekly , setWeekly] = useState(false)
     console.log(content)
     console.log( content.map( one => one.name))
-    
+    const handleBtn = (e) =>{
+
+        if(e.target.innerHTML === "Approve"){
+            e.target.innerHTML = "Suspend"
+            e.target.style.background = "#e3242b"
+       //         setBtn(e.target.value)
+       //         console.log(e.target.innerHTML , 'uiygoy')
+        }
+        else{
+            e.target.innerHTML = "Approve"
+            e.target.style.background = "#41a371"
+            e.target.style.color = "#fff"
+          //       setBtn(e.target.value)
+         //   console.log(e.target.innerHTML , '8888')
+        }
+
+      
+
+        
+        
+    }
     return (
         <React.Fragment>
              <div className="admindash__main">
@@ -39,6 +59,35 @@ const SidebarContent = ({content}) => {
                                </div> */}
                          </div>
                          <Chart content={content} />
+                         <div className="chart__details">
+
+                         
+                         <div className="current__event">
+                             <div className="row row_header">
+                                <h3>Mechanic Name</h3>
+                                <h3>Phone Number</h3>
+                                <h3>Location</h3>
+                                <h3>Action</h3>
+                             </div>
+                             <div className=" row row_two">
+                             <p>Stanlee Joseph</p>
+                             <p>09024972493</p>
+                             <p>Enugu, Nigeria</p>
+                             <button onClick = {(e) => handleBtn(e)}>Approve</button>
+                             </div>
+                             <div className="row row_three">
+                            <p>Micheal Smith</p>
+                            <p>070323232424</p>
+                            <p>Kogi, Nigeria</p>
+                            <button onClick = {(e) => handleBtn(e)}>Approve</button>
+                             </div>
+                             <div className="row row_four">
+                             <p>Chiamaka chike</p>
+                             <p>09037273737</p>
+                             <p>Lagos Nigeria</p>
+                             <button onClick = {(e) => handleBtn(e)}>Approve</button>
+                             </div>
+                         </div>
                          <div  className="admindash__weekly">
                             <div className=" heading">
                             <h3 className={weekly === true ? `activated` : ``} onClick={() => setWeekly(false)}>Todays</h3>
@@ -90,6 +139,9 @@ const SidebarContent = ({content}) => {
                              </div> }
                              
                           </div>
+                         </div>
+
+                        
                         
                    </div>
         </React.Fragment>

@@ -18,7 +18,7 @@ const Chart = ({content}) => {
     return (
         <div className="chart">
 
-            {incoming !== data[0] ?  <h1>uihellow helow </h1> :  <ChartBody content={content} name={name} />  }
+            {incoming !== data[0] ?  <h1></h1> :  <ChartBody content={content} name={name} />  }
 
 
             
