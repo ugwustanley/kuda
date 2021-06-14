@@ -1,12 +1,24 @@
-import React,{useState} from 'react'
+import React,{useState , useEffect} from 'react'
 import Chart from '../Chart/Chart'
 import {List , X} from 'phosphor-react'
 import "./SidebarContent.scss"
 
 const SidebarContent = ({content}) => {
     const [weekly , setWeekly] = useState(false)
+    const [todaytab , setTodaytab] = useState(["Total Orders" , "Orders Recieved" , "Orders Delivered" , "New Customers"])
     console.log(content)
     console.log( content.map( one => one.name))
+    let oneTab = content.map(one => one.tab)
+
+    useEffect(() => {
+        const oneContent = content.map(one => one.tab)
+        console.log(oneContent[0])
+        if(oneContent[0] === "Mechanic"){
+            setTodaytab(["Total Bookings" , "Ongoing Repairs" , "Repairs Completed" , "New Bookings"])
+        }else{
+            setTodaytab(["Total Orders" , "Orders Recieved" , "Orders Delivered" , "New Customers"])
+        }
+    }, [content])
     const handleBtn = (e) =>{
 
         if(e.target.innerHTML === "Approve"){
@@ -64,7 +76,7 @@ const SidebarContent = ({content}) => {
                          
                          <div className="current__event">
                              <div className="row row_header">
-                                <h3>Mechanic Name</h3>
+                                <h3>{oneTab[0]} Name</h3>
                                 <h3>Phone Number</h3>
                                 <h3>Location</h3>
                                 <h3>Action</h3>
@@ -90,50 +102,50 @@ const SidebarContent = ({content}) => {
                          </div>
                          <div  className="admindash__weekly">
                             <div className=" heading">
-                            <h3 className={weekly === true ? `activated` : ``} onClick={() => setWeekly(false)}>Todays</h3>
+                            <h3 className={weekly === true ? `activated` : ``} onClick={() => setWeekly(false)}>Today</h3>
                              <h3 className={weekly === true ? `` : `activated`} onClick={() => setWeekly(true)}>This Week</h3>
                             </div>
                             {weekly === false?
                             <div className="daily__tab" style={weekly === false ? {animationName: "show1"} : {animationDelay:"0"}} >
                             <div className="admindash__weekly__content">
-                            <p>Total Orders</p>
+                            <p>{todaytab[0]}</p>
                             <p>461</p>   
                             </div>
 
                             <div className="admindash__weekly__content">
-                            <p>Orders Received</p>
+                            <p>{todaytab[1]}</p>
                             <p>103</p>   
                             </div>
 
                             <div className="admindash__weekly__content">
-                            <p>Orders Delivered</p>
+                            <p>{todaytab[2]}</p>
                             <p>341</p>   
                             </div>
 
                             <div className="admindash__weekly__content">
-                            <p>New Customers</p>
+                            <p>{todaytab[3]}</p>
                             <p>789</p>   
                             </div>
                             </div>
                             :
                              <div className="weekly__tab" style={weekly === true ? {animationName: "show2"} : {animationDelay:"0"}}>
                              <div className="admindash__weekly__content">
-                             <p>Total Orders</p>
+                             <p>{todaytab[0]}</p>
                              <p>1002</p>   
                              </div>
  
                              <div className="admindash__weekly__content">
-                             <p>Orders Received</p>
+                             <p>{todaytab[1]}</p>
                              <p>23</p>   
                              </div>
  
                              <div className="admindash__weekly__content">
-                             <p>Orders Delivered</p>
+                             <p>{todaytab[2]}</p>
                              <p>27</p>   
                              </div>
  
                              <div className="admindash__weekly__content">
-                             <p>New Customers</p>
+                             <p>{todaytab[3]}</p>
                              <p>290</p>   
                              </div>
                              </div> }
