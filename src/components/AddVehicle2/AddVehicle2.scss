@@ -1,4 +1,4 @@
-.AddVehicle{
+.AddVehicle2{
     padding:0px 10px;
     padding-bottom:20px;
     &__heading{
@@ -58,9 +58,6 @@
             margin-top:10px;
             font-weight: 600;
             font-size:14px;
-        }
-        a{
-           grid-column: 1/3;  
         }
         textarea{   
             height: 100px;

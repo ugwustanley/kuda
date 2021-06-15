@@ -22,6 +22,7 @@ import Sales from '../Sales/Sales'
 import Success from '../Success/Success'
 import TransactionDetail from '../TransactionDetail/TransactionDetail'
 import Cards from '../Cards/Cards'
+import AddVehicle2 from '../AddVehicle2/AddVehicle2'
 import ShopDetails from '../ShopDetails/ShopDetails'
 import Home from '../Home/Home'
 import Dashboard from '../Dashboard/Dashboard'
@@ -91,6 +92,7 @@ const Main = () => {
                 <Route exact path="/rate" component={Rate} />
                 <Route exact path="/transactionDetail" component={TransactionDetail} />
                 <Route exact path='/login' component={Login} />
+                <Route exact path='/addvehicle2' component={AddVehicle2} />
                 <Route exact path='/routine' component={Routine} />
                 <Route exact path='/expense' component={Expense} />
                 <Route exact path='/book' component={Book} />
