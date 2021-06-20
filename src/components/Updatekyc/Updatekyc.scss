@@ -40,6 +40,15 @@
             font-size: 14px;
             font-weight: 700;
         }
+        .invaid{
+            font-size:12px;
+            color:red;
+            font-weight:600;
+            display:block;
+        }
+        .valid{
+            display:none;
+        }
         input , select{
             display: block;
             width:calc(100% - 20px);

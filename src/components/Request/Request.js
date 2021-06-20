@@ -75,6 +75,22 @@ const Request = () => {
 
                  <label for="amount">Amount</label>
                  <input name="amount" onChange={(e) => setAcc(e.target.value)} type="tel" defaultValue="" id="amount" className={isfilled === false ? `fail amount` :` amount` }  />
+                 
+                 <label for="pay_later">Pay Later Limit</label>
+                 <select className="select">
+
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+
+                 </select>
 
                  <input onClick={ (e) => handleValidation(e)} name="save" type="submit" value="Make request" id="save" className="save"/>
             </form>

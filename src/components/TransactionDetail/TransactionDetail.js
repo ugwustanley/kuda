@@ -31,11 +31,11 @@ const TransactionDetail= () => {
                   </div>
                </div>
 
-               <p className="input_heading">Transaction type</p>
-               <h5 className="input_data">Recurring Payment</h5>
+               <p className="input_heading">Active Payment</p>
+               <h5 className="input_data"><Naira>1000</Naira></h5>
 
-               <p className="input_heading">Session ID</p>
-               <h5  className="input_data">0000003025523020352032723</h5>
+               <p className="input_heading">Pay Later (Amount/Cycle/Limit)</p>
+               <h5  className="input_data">1000/Monthly/12</h5>
 
                <h4 className="more_actions">More Actions</h4>
                <LinkCard  IconOne={ShareNetwork} Heading="Share Transaction Receipt" ParaG="Share transaction receipt with friends" />

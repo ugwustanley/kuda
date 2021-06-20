@@ -1,15 +1,20 @@
 import React,{useState} from 'react'
 import Chart from '../Chart/Chart'
-import {List , X} from 'phosphor-react'
+import {List , X , XCircle , CircleWavy , CaretDown  , Star} from 'phosphor-react'
 import Logo from './images/20210430_091825-removebg-preview_0__1-removebg-preview (1).png'
 import SidebarContent from '../SidebarContent/SidebarContent'
 import "./AdminDash.scss"
 
 const AdminDash = () => {
     const [show , setShow] = useState(false)
+    const [approve , setApprove] = useState(false)
+    const [profile , setProfile] = useState(false)
     const [weekly , setWeekly] = useState(false)
     const [current , setCurrent] = useState('Users')
+    const [tab , setTab] = useState("")
     const [content , setContent] = useState(
+
+
         {
             "Users":[
                 {name: "Registered Users" , total : "18,000" , data:[83,36,42,72,26,44,75] , tab:"Users" },
@@ -81,6 +86,14 @@ const AdminDash = () => {
     console.log( content[current] ,  typeof current)
     let dataarrray =  content[current].map( one => one.data)
     console.log(dataarrray[0] )
+
+
+    const approveSet = () =>{
+        setApprove(true)
+    }
+    const showProfile = () =>{
+        setProfile(true)
+    }
     return (
         <div className="admindash">
             <div className={ show === true ? `nav__show admindash__nav` : `nav__hide admindash__nav`}>
@@ -98,7 +111,7 @@ const AdminDash = () => {
                     <li onClick={() => setCurrent("Referrals")} className={current === "Referrals" ? `active`: ``}><p>Referrals</p></li>
                     <li onClick={() => setCurrent("Payroll")} className={current === "Payroll" ? `active`: ``}><p>Payroll</p></li>
                     <li onClick={() => setCurrent("Transactions")} className={current === "Transactions" ? `active`: ``}><p>Transactions</p></li>
-                     <li onClick={() => setCurrent("Mechanic")} className={current === "Mechanic" ? `active`: ``}><p>Mechanic</p></li>
+                    <li onClick={() => setCurrent("Mechanic")} className={current === "Mechanic" ? `active`: ``}><p>Mechanic</p></li>
                     <li onClick={() => setCurrent("Sub admin")} className={current === "Sub admin" ? `active`: ``}><p>Sub admin</p></li>
                     
                 </ul>
@@ -110,9 +123,148 @@ const AdminDash = () => {
                    </div>
                    <img src={Logo} className="logo"/>
                    
-                   <SidebarContent content={content[current]} />
+                   <SidebarContent showProfile={showProfile} setApprove={approveSet} content={content[current]} />
                    
             </div>
+
+            { approve === false? <p></p>:
+           <div className="tag__box ">
+           <div className="tag"   >
+               <div className="tag__cancel" onClick={() => setApprove(false)}><XCircle size={25} weight="bold" color="red" /></div>
+               <h4>Approve</h4>
+
+               <input type="text" class="landmark" placeholder="First Landmark Neighbourhood"/>
+
+                <input type="text" class="landmark" placeholder="Second Landmark Neighbourhood"/>
+
+                <input type="text" class="landmark" placeholder="Third Landmark Neighbourhood"/>
+             
+            
+                <button className="storeandsocial">Add</button>
+              
+
+           </div>
+           </div>
+         }
+
+          { profile === false? <p></p>:
+           <div className="tag__box ">
+           <div className="tag mechanics"   >
+               <div className="tag__cancel" onClick={() => setProfile(false)}><XCircle size={25} weight="bold" color="red" /></div>
+               <h4>Mechanic</h4>
+
+               <div className="mechanic__details">
+               <h3>Name</h3>
+               <p><span><CircleWavy size={14} color="green" weight="fill" /></span>Ugwu chiagozie stanley</p>
+               </div>
+
+               <div className="mechanic__details">
+               <h3>Contact</h3>
+               <p>090232032355</p>
+               </div>
+
+               <div className="mechanic__details">
+               <h3>Location</h3>
+               <p>Nsukka, Enugu State</p>
+               </div>
+
+               <div className="mechanic__details">
+               <h3>Type</h3>
+               <p>Auto Electrician</p>
+               </div>
+
+
+
+                <div className="pro" style={tab === "pro"? {borderBottom:"1px solid rgba(0,0,0,.2)"}:{borderBottom:"0px solid rgba(0,0,0,.2)"}}>
+                <h3>Profile</h3>
+                <div className={tab === "pro"?`reverse`:null} onClick={() => tab === "pro"? setTab(""): setTab("pro")}><CaretDown size={15} weight="bold" /></div>
+                </div>
+
+                <div className={tab === "pro"? `open profile`:`profile`}>
+             
+
+                 <div>
+                     <h3>First Name</h3>
+                     <p>Ugwu</p>
+                 </div>
+
+                  <div>
+                     <h3>Last Name</h3>
+                     <p>Chiagozie</p>
+                 </div>
+
+                  <div>
+                     <h3>Phone Number</h3>
+                     <p>09023472324</p>
+                 </div>
+
+                  <div>
+                     <h3>Email Address</h3>
+                     <p>ugwustan@gmail.com</p>
+                 </div>
+
+                 <div>
+                     <h3>Mobme handle</h3>
+                     <p><span><CircleWavy size={12} color="green" weight="fill" /></span>stanlee</p>
+                 </div>
+
+
+               
+            
+                </div>
+
+                <div className="ref" style={tab === "ref"? {borderBottom:"1px solid rgba(0,0,0,.2)"}:{borderBottom:"0px solid rgba(0,0,0,.2)"}}>
+                <h3>Car reference(s)</h3>
+                <div className={tab === "ref"?`reverse`:null} onClick={() => tab === "ref"? setTab(""): setTab("ref")}><CaretDown size={15} weight="bold" /></div>
+                </div>
+
+                <div className={tab === "ref"? `open references`:`references`}>
+             
+                <p>James John</p>
+                <p>Josephine Gloria</p>
+                <p>Chizara chioma</p>
+                <p>Micheal John</p>
+            
+                </div>
+
+                <div className="rating" style={tab === "rating"? {borderBottom:"1px solid rgba(0,0,0,.2)"}:{borderBottom:"0px solid rgba(0,0,0,.2)"}}>
+                <h3>Ratings</h3>
+                <div className={tab === "rating"?`reverse`:null} onClick={() => tab === "rating"? setTab(""): setTab("rating")}><CaretDown size={15} weight="bold" /></div>
+                </div>
+                
+                <div className={tab === "rating"? `open mechanic__rates`:`mechanic__rates`}>
+                 <div>
+                     <h3>Paul ellen</h3>
+                     <p>5<span><Star size={12} color="#e9d907" weight="fill" /></span></p>
+                 </div>
+
+                  <div>
+                     <h3>Nwoke Chidioha</h3>
+                     <p>3<span><Star size={12} color="#e9d907" weight="fill" /></span></p>
+                 </div>
+
+                  <div>
+                     <h3>Chioma Divine</h3>
+                     <p>5<span><Star size={12} color="#e9d907" weight="fill" /></span></p>
+                 </div>
+
+                  <div>
+                     <h3>Grace Josephine</h3>
+                     <p>4<span><Star size={12} color="#e9d907" weight="fill" /></span></p>
+                 </div>
+
+                </div>
+
+
+             
+            
+               
+              
+
+           </div>
+           </div>
+         }
+
         </div>
     )
 }

@@ -3,7 +3,7 @@ import Chart from '../Chart/Chart'
 import {List , X} from 'phosphor-react'
 import "./SidebarContent.scss"
 
-const SidebarContent = ({content}) => {
+const SidebarContent = ({content , showProfile , setApprove}) => {
     const [weekly , setWeekly] = useState(false)
     const [todaytab , setTodaytab] = useState(["Total Orders" , "Orders Recieved" , "Orders Delivered" , "New Customers"])
     console.log(content)
@@ -81,24 +81,30 @@ const SidebarContent = ({content}) => {
                                 <h3>Location</h3>
                                 <h3>Action</h3>
                              </div>
+
                              <div className=" row row_two">
-                             <p>Stanlee Joseph</p>
-                             <p>09024972493</p>
-                             <p>Enugu, Nigeria</p>
-                             <button onClick = {(e) => handleBtn(e)}>Approve</button>
+                             <p onClick={() => showProfile(true)}>Stanlee Joseph</p>
+                             <p onClick={() => showProfile(true)}>09024972493</p>
+                             <p onClick={() => showProfile(true)}>Enugu, Nigeria</p>
+                             <button onClick = {(e) => {handleBtn(e) ; setApprove()}}>Approve</button>
                              </div>
-                             <div className="row row_three">
-                            <p>Micheal Smith</p>
-                            <p>070323232424</p>
-                            <p>Kogi, Nigeria</p>
-                            <button onClick = {(e) => handleBtn(e)}>Approve</button>
+
+                             <div  className="row row_three">
+                            <p onClick={() => showProfile(true)}>Micheal Smith</p>
+                            <p onClick={() => showProfile(true)}>070323232424</p>
+                            <p onClick={() => showProfile(true)}>Kogi, Nigeria</p>
+                            <button onClick = {(e) => {handleBtn(e) ; setApprove()}}>Approve</button>
                              </div>
-                             <div className="row row_four">
-                             <p>Chiamaka chike</p>
-                             <p>09037273737</p>
-                             <p>Lagos Nigeria</p>
-                             <button onClick = {(e) => handleBtn(e)}>Approve</button>
+
+                             <div  className="row row_four">
+                             <React.Fragment onClick={() => showProfile(true)}>
+                             <p onClick={() => showProfile(true)}>Chiamaka chike</p>
+                             <p onClick={() => showProfile(true)}>09037273737</p>
+                             <p onClick={() => showProfile(true)}>Lagos Nigeria</p>
+                             </React.Fragment>
+                             <button onClick = {(e) => {handleBtn(e) ; setApprove()}}>Approve</button>
                              </div>
+                             
                          </div>
                          <div  className="admindash__weekly">
                             <div className=" heading">

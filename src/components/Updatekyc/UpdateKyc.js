@@ -156,9 +156,10 @@ const Updatekyc = () => {
                   {showing !== 3? <p></p>: 
                  <div>
                  <h3>Activate Organization mobkey</h3>
+                
                  <label for="orgmob">Enter Organization $mobme</label>
                  <input name="orgmob"  onChange={(e) => setOrg(e.target.value)} type="text" defaultValue="" id="orgmob" className={isfilled3 === false ? `fail orgmob` :`orgmob`} />
-
+                 <p className={isfilled3 === false? `invaid`:`valid`} >Invaid organization mobkey</p>
                  <input onClick={ (e) => handleValidation3(e)}  name="save" type="submit" value="Submit" id="submit" className="save" />
                 </div>
                   }

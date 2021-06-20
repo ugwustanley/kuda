@@ -58,11 +58,14 @@ const Paypage = () => {
                  </Link>
              </div>
          </div>
+        
+  
          <Link to="/pay">
              <div className="add">
                  <Plus size={25}   color="#fff" />
              </div>
          </Link>
+       
             
           
 

@@ -54,6 +54,15 @@ console.log(NaijaStates.lgas("Oyo"))
 
                </select>
 
+               <select defaultValue = "Town" id="state"   className={isfilled === false ? `fail state` : `state` }>
+
+               <option value="Mechanic">Mechanic</option>
+               <option value="Auto Electrician">Auto Electrician</option>  
+               <option value="Bodywork Technician">Bodywork Technician</option>
+             
+               </select>
+
+
 
                  <input onClick={ (e) => handleValidation(e)} name="save" type="submit" value="SEARCH" id="save" class="save" />
             </form>
