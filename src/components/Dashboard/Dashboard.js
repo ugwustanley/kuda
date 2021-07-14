@@ -27,12 +27,16 @@ const Dashboard = () => {
     }
     return (
         <div className={show || deletes ? `Dashboard popup` : `Dashboard`}>
-                   <div className="Dashboard__heading">
+      
+
+       
+         <div className="Dashboard__heading">
          <div onClick={history.goBack} >               
                         <CaretLeft size={20} weight="bold" />           
                  </div>
                 <h5>Dashboard</h5>
           </div>
+          <div className="Dashboard_main">
 
           <div className="tabs">
                   <p className={manage === true ? `manage active-tab`: `manage`} onClick={() => setManage(true)}>Manage catalogues</p>
@@ -78,11 +82,12 @@ const Dashboard = () => {
 
            </div>
            </div>
+           
          }
           
         
   
-
+          </div>
          
         </div>
     )

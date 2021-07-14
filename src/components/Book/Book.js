@@ -5,7 +5,7 @@ import './Book.scss'
 
 const Book = () => {
     let history =  useHistory()
-  //  const [show , setShow] = useState(false)
+    const [show , setShow] = useState(false)
   //<input name="file" type="text" defaultValue="" id="file" class="file" ></input>
 // <input name="cost" type="text" defaultValue="" id="cost" placeholder="Cost price" class="cost" />
 //  <input name="desc" type="text"  defaultValue="" id="desc" class="desc" placeholder="Product description" />
@@ -23,9 +23,9 @@ const Book = () => {
                   <p className="p">Booking date</p>
                  <input name="name" type="date" defaultValue="" id="name" class="name" placeholder="Booking date" />
                        
-                 <input name="name" type="number" defaultValue="" id="name" class="name" placeholder="Repair cost" />
+                 <input name="name" type="number" defaultValue="" id="name" class="name" placeholder="Parts cost" />
                        
-                
+                 <input name="name" type="number" defaultValue="" id="name" class="name" placeholder="Workmanship" />
 
                  
                  <div className="file">
@@ -35,9 +35,20 @@ const Book = () => {
                      <p>Upload invoice</p>
                  </div>
                  <button> Pay now</button>
-                 <button>Pay later</button>
+                 <button onClick={() => setShow(true)}>Pay cash to mechanic</button>
                
             </form>
+
+            { show === false? <p></p>:
+           <div className="tag__box" >
+           <div className="tag" >
+              <p>Enter OTP from mechanic</p>
+              <input type="text" name="tag__name" className="tag__name" id="tag_name" />
+              <div  onClick={() => setShow(false)}>
+              <input type="submit" name="create__tag" className="create__tag" value="Confirm" />
+              </div>
+           </div>
+           </div>}
 
    
         </div>

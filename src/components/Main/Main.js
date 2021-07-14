@@ -13,29 +13,30 @@ import ShopDetailsHotel from '../ShopDetailsHotel/ShopDetailsHotel'
 import Balance from '../Balance/Balance'
 import Cashback from  '../Cashback/Cashback'
 import Paypage from '../Paypage/Paypage'
-import Vendor from '../Vendor/Vendor'
+import Vendor from '../../pages/Vendor/Vendor'
 import Failed from '../Failed/Failed'
 import ProductDetail2 from '../ProductDetail2/ProductDetail2'
 import SwitchOrg from '../SwitchOrg/SwitchOrg'
 import AddVehicle from '../AddVehicle/AddVehicle'
 import Sales from '../Sales/Sales'
-import Success from '../Success/Success'
-import TransactionDetail from '../TransactionDetail/TransactionDetail'
+import Managestaff from '../Managestaff/Managestaff'
+import Success from '../../pages/Success/Success'
+import TransactionDetail from '../../pages/TransactionDetail/TransactionDetail'
 import Cards from '../Cards/Cards'
 import AddVehicle2 from '../AddVehicle2/AddVehicle2'
 import ShopDetails from '../ShopDetails/ShopDetails'
 import Home from '../Home/Home'
-import Dashboard from '../Dashboard/Dashboard'
+// import Dashboard from '../Dashboard/Dashboard'
 import Shop from '../Shop/Shop'
 import Routine from '../Routine/Routine'
 import Category from '../Category/Category'
 import Dashboard2 from '../Dashboard2/Dashboard2'
 import Pay from '../Pay/Pay'
-import Summary from '../Summary/Summary'
+import Summary from '../../pages/Summary/Summary'
 import Rate from '../Rate/Rate'
 import ShopDetails2 from '../ShopDetails2/ShopDetails2'
 import Kin from '../Kin/Kin'
-import Summary2 from '../Summary2/Summary2'
+import Summary2 from '../../pages/Summary2/Summary2'
 import CreateProduct from '../CreateProduct/CreateProduct'
 import More from '../More/More'
 import Expense from '../Expense/Expense'
@@ -44,8 +45,8 @@ import Menu from '../Menu/Menu'
 import Payroll from '../Payroll/Payroll'
 import Login from '../Login/Login'
 import Recurr from '../Recurr/Recurr'
-import Transaction from '../Transaction/Transaction'
-import Signup from "../Signup/Signup"
+import Transaction from '../../pages/Transaction/Transaction'
+import Signup from "../../pages/Signup/Signup"
 import ShopDetails3 from '../ShopDetails3/ShopDetails3'
 import Admin from '../Admin/Admin'
 import Adminorg from '../Adminorg/Adminorg'
@@ -58,8 +59,8 @@ import BookMec from '../BookMec/BookMec'
 import Display from '../Display/Display'
 import ProductDetail from '../ProductDetail/ProductDetail'
 import Settings from '../Settings/Settings'
-import Updatekyc from '../Updatekyc/UpdateKyc'
-import Withdraw from '../Withdraw/Withdraw'
+import Updatekyc from '../../pages/Updatekyc/UpdateKyc'
+import Withdraw from '../../pages/Withdraw/Withdraw'
 import Transpass from '../Transpass/Transpass'
 import ChangePass from '../ChangePass/ChangePass'
 import Notification from '../Notification/Notification'
@@ -79,6 +80,7 @@ const Main = () => {
                 <Route exact path='/card' component={Cards} />
                 <Route exact path='/summary' component={Summary} />
                 <Route exact path='/summary2' component={Summary2} />
+                <Route exact path='/managestaff' component={Managestaff} />
                 <Route exact path='/comingsoon' component={ComingSoon } />
                 <Route exact path='/more' component={More} />
                 <Route exact path='/queue' component={Queue} />
@@ -102,8 +104,8 @@ const Main = () => {
                 <Route exact path='/shopdetails' component={ShopDetails} />
                 <Route exact path='/shopdetailstwo' component={ShopDetails2} />
                 <Route exact path='/shopdetailsthree' component={ShopDetails3} />
-                <Route exact path='/dashboard' component={Dashboard} />
-                <Route exact path='/dashboard2' component={Dashboard2} />
+                {/* <Route exact path='/dashboard' component={Dashboard} /> */}
+                {/* <Route exact path='/dashboard2' component={Dashboard2} /> */}
                 <Route exact path='/signup' component={Signup} />
                 <Route exact path='/categorytwo' component={CategoryTwo} />
                 <Route exact path='/setting' component={Settings} />

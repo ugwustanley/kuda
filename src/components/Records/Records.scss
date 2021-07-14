@@ -1,11 +1,13 @@
 .records{
-    width:100%;
+    width:calc(100% + 10px);
     height:calc(100vh - 340px);
+    margin-right:10px;
     overflow-y: scroll;
     &__day{
         color:#cfcfcf;
     }
    .record{
+    width:calc(100% - 2px);
     display: grid;
     grid-template-columns: 50px  1fr 70px;
     align-items: center;

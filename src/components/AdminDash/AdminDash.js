@@ -1,7 +1,11 @@
 import React,{useState} from 'react'
-import Chart from '../Chart/Chart'
+import Naira from 'react-naira'
 import {List , X , XCircle , CircleWavy , CaretDown  , Star} from 'phosphor-react'
 import Logo from './images/20210430_091825-removebg-preview_0__1-removebg-preview (1).png'
+import SidebarUser from '../SidebarUser/SidebarUser'
+import SidebarOrg from '../SidebarOrg/SidebarOrg'
+import SidebarMechanic from '../SidebarMechanic/SidebarMechanic'
+import SidebarPayroll from '../SidebarPayroll/SidebarPayroll'
 import SidebarContent from '../SidebarContent/SidebarContent'
 import "./AdminDash.scss"
 
@@ -9,6 +13,7 @@ const AdminDash = () => {
     const [show , setShow] = useState(false)
     const [approve , setApprove] = useState(false)
     const [profile , setProfile] = useState(false)
+    const [showStaffs , setShowstaffs] = useState(false)
     const [weekly , setWeekly] = useState(false)
     const [current , setCurrent] = useState('Users')
     const [tab , setTab] = useState("")
@@ -94,6 +99,10 @@ const AdminDash = () => {
     const showProfile = () =>{
         setProfile(true)
     }
+
+    const showStaff = () =>{
+        setShowstaffs(true)
+    }
     return (
         <div className="admindash">
             <div className={ show === true ? `nav__show admindash__nav` : `nav__hide admindash__nav`}>
@@ -123,11 +132,25 @@ const AdminDash = () => {
                    </div>
                    <img src={Logo} className="logo"/>
                    
-                   <SidebarContent showProfile={showProfile} setApprove={approveSet} content={content[current]} />
+                   {/* <SidebarContent showStaff={showStaff} showProfile={showProfile} setApprove={approveSet} content={content[current]} current={current} /> */}
+                   {
+                       current === "Users"? <SidebarUser  />:null
+                   }
+
+                    {
+                       current === "Organizations"? <SidebarOrg  />:null
+                   }
+
                    
+                   {
+                       current === "Mechanic"? <SidebarMechanic  />:null
+                   }
+                    {
+                       current === "Payroll"? <SidebarPayroll  />:null
+                   }  
             </div>
 
-            { approve === false? <p></p>:
+            {/* { approve === false? <p></p>:
            <div className="tag__box ">
            <div className="tag"   >
                <div className="tag__cancel" onClick={() => setApprove(false)}><XCircle size={25} weight="bold" color="red" /></div>
@@ -264,6 +287,54 @@ const AdminDash = () => {
            </div>
            </div>
          }
+
+
+
+{ showStaffs === false? <p></p>:
+           <div className="tag__box ">
+           <div className="tag mechanics"   >
+               <div className="tag__cancel" onClick={() => setProfile(false)}><XCircle size={25} weight="bold" color="red" /></div>
+               <h4>Staff</h4>
+
+               <div className="mechanic__details">
+               <h3>Handle</h3>
+               <p><span><CircleWavy size={14} color="green" weight="fill" /></span>@jamesjohn</p>
+               </div>
+
+               <div className="mechanic__details">
+               <h3>Salary</h3>
+               <p><Naira>79999</Naira></p>
+               </div>
+
+               <div className="mechanic__details">
+               <h3>cycle</h3>
+               <p>78</p>
+               </div>
+
+               <div className="mechanic__details">
+               <h3>Paylater limit</h3>
+               <p>9</p>
+               </div>
+
+               <div className="mechanic__details">
+               <h3>Tax Beneficiary</h3>
+               <p>Lagos</p>
+               </div>
+
+
+
+               
+
+
+
+             
+            
+               
+              
+
+           </div>
+           </div>
+         } */}
 
         </div>
     )

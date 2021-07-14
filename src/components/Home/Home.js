@@ -71,8 +71,9 @@ const Home = () => {
                   </div>
                  </div>
             </div>
-
-          <Records />
+             <div className="record_container">
+              <Records />
+            </div>
 
         </div>
     )

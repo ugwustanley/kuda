@@ -58,7 +58,8 @@ const Manage = ({setShowEvent , setDeletesEvent}) => {
         
     }
     return (
-        <>
+        <div className="manage">
+           
                 <h4>Estimated returns</h4>
           
           <div className="Dashboard__cards">
@@ -154,8 +155,9 @@ const Manage = ({setShowEvent , setDeletesEvent}) => {
 
 
         
-         </div> 
-        </>
+           </div> 
+         </div>
+    
     )
 }
 

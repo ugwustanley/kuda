@@ -22,6 +22,20 @@
     }
     form{
         margin-top:30px;
+        .draggable{
+            position:relative;
+            width:calc(100% - 20px);
+            height:100px;
+            border-radius:8px;
+            background-color:#f5f5f5;
+            padding:10px 10px;
+        }
+        .handle{
+           margin-top:10px;
+           font-size:14px;
+           font-weight:600;
+           
+        }
         label{
             display:block;
             transform: translateY(0px);

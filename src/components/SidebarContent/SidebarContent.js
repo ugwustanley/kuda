@@ -1,13 +1,15 @@
 import React,{useState , useEffect} from 'react'
 import Chart from '../Chart/Chart'
-import {List , X} from 'phosphor-react'
+import Naira from 'react-naira'
+import ManageStaffAdmin from '../ManageStaffAdmin/ManageStaffAdmin'
+import {List , X , CaretLeft} from 'phosphor-react'
 import "./SidebarContent.scss"
 
-const SidebarContent = ({content , showProfile , setApprove}) => {
+const SidebarContent = ({content , showProfile , setApprove , current , showStaff}) => {
     const [weekly , setWeekly] = useState(false)
     const [todaytab , setTodaytab] = useState(["Total Orders" , "Orders Recieved" , "Orders Delivered" , "New Customers"])
-    console.log(content)
-    console.log( content.map( one => one.name))
+    // console.log(content , current)
+    // console.log( content.map( one => one.name))
     let oneTab = content.map(one => one.tab)
 
     useEffect(() => {
@@ -158,10 +160,103 @@ const SidebarContent = ({content , showProfile , setApprove}) => {
                              
                           </div>
                          </div>
+                         <div style={current === "Payroll" ? null :{display:"none"}} >
+                             <ManageStaffAdmin showStaff={showStaff} />
+                         </div>
+{/* <div style={current === "Payroll" ? null :{display:"none"}} className="manage_staff">
 
+       
+     <div className="staff_details">
+           <div className="staff_unit">
+                <h4>Handle</h4>
+                <p>@vincentmicheal</p>
+                <h4>Salary</h4>
+                <p><Naira>26000</Naira></p>
+                <h4>Cycle</h4>
+                <p>13</p>
+                <h4>Paylater limit</h4>
+                <p>18</p>
+                <h4>Tax beneficiary</h4>
+                <p>Abia</p>
+
+                <button className="suspend">Suspend</button>
+                
+           </div>
+
+           <div className="staff_unit">
+                <h4>Handle</h4>
+                <p>@victorpaul</p>
+                <h4>Salary</h4>
+                <p><Naira>17000</Naira></p>
+                <h4>Cycle</h4>
+                <p>19</p>
+                <h4>Paylater limit</h4>
+                <p>16</p>
+                <h4>Tax beneficiary</h4>
+                <p>Lagos</p>
+                <button className="suspend">Suspend</button>
+                
+           </div>
+
+           <div className="staff_unit">
+                <h4>Handle</h4>
+                <p>@peterchiagozie</p>
+                <h4>Salary</h4>
+                <p><Naira>80000</Naira></p>
+                <h4>Cycle</h4>
+                <p>22</p>
+                <h4>Paylater limit</h4>
+                <p>8</p>
+                <h4>Tax beneficiary</h4>
+                <p>Enugu</p>
+                <button className="suspend">Suspend</button>
+                
+           </div>
+
+           <div className="staff_unit">
+                <h4>Handle</h4>
+                <p>@JamesJohn</p>
+                <h4>Salary</h4>
+                <p><Naira>6000</Naira></p>
+                <h4>Cycle</h4>
+                <p>78</p>
+                <h4>Paylater limit</h4>
+                <p>7</p>
+                <h4>Tax beneficiary</h4>
+                <p>Lagos</p>
+                <button className="suspend">Suspend</button>
+                
+           </div>
+           </div>
+
+
+        
+        <div className="payroll_acc">
+           <div className="payroll_details">
+           <h4 className="header">Payroll bank details</h4>
+           {/* <button className="update_details" onClick={() => setUpdate(true)}>Update Details</button> 
+           </div>
+           <div className="bank_details">
+               <h4>Bank name</h4>
+               <p>First Bank Nigeria</p>
+           </div>
+           <div className="bank_details">
+
+               <h4>Account Name</h4>
+               <p>Ugwu Chiagozie Stanley</p>
+
+           </div>
+           <div className="bank_details">
+               <h4>Account Number</h4>
+               <p>20100784334</p>
+           </div>
+           </div>
+           </div>
+            */}
+           </div>
                         
                         
-                   </div>
+                   
         </React.Fragment>
     )
 }

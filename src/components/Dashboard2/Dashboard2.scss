@@ -8,6 +8,16 @@
         text-decoration: none;
         color:inherit;
     }
+    .Dashboard2_main{
+       
+        @media(min-width:800px){
+          
+          margin-left:200px;
+          margin-right:200px;
+            
+        }
+    
+}
     &__heading{
         display:grid;
         grid-template-columns: repeat(1fr , 3);

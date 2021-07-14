@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import {useHistory , Link} from 'react-router-dom'
 import Naira from 'react-naira'
-import LinkCard from '../LinkCard/LinkCard'
+import LinkCard from '../../components/LinkCard/LinkCard'
 import {CaretLeft , PaperPlaneTilt , WarningCircle, ShareNetwork} from 'phosphor-react'
 import './TransactionDetail.scss'
 

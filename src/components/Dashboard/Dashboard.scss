@@ -4,18 +4,39 @@
     background-color: #f7f7f7;
     font-family: 'Mulish', sans-serif;
     min-height: 100vh;
+    
+   
+    // @media(min-width:400px){
+    //     display:grid;
+    //     grid-template-columns:1fr 4fr 1fr;
+    // }
+    .Dashboard_main{
+       
+            @media(min-width:800px){
+              
+              margin-left:200px;
+              margin-right:200px;
+                
+            }
+        
+    }    
+    
     a{
         text-decoration: none;
         color:inherit;
     }
     &__heading{
         display:grid;
+        
         grid-template-columns: repeat(1fr , 3);
         align-items: center;
         border-bottom: 1px solid #dedede;
         padding-bottom:10px;
         margin-bottom:30px;
         height:40px;
+        // @media(min-width:600px){
+        //     grid-column:1/4;
+        // }
         h5{
             grid-column: 2/3;
             font-size: 14px;
@@ -43,9 +64,14 @@
     }
     .tabs{
         display:grid;
+        
         grid-template-columns: 1fr 1fr;
         text-align: center;
         padding:0px 10px;
+        // @media(min-width:600px){
+        //     display:flex;
+        //     justify-content:center;
+        // }
         p{
             font-weight: 500;
             font-size: 14px; 

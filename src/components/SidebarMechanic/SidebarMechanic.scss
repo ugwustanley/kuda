@@ -1,6 +1,5 @@
 .admindash__main{
     margin-top: 80px;
-    
     padding:0px;
    
    .chart__details{
@@ -114,7 +113,7 @@
         background-color: transparent;
          display:flex;
          flex-wrap: wrap;
-        // justify-content: space-between;
+         justify-content: space-between;
          margin: 20px 3px;
          margin-top:100px;
          @media screen and (max-width:600px){
@@ -417,5 +416,232 @@
     //     overflow:hidden;
     // }
     }
+    .tag__box{
+        position: absolute;
+        display:grid;
+        place-content:center;
+        top:0px;
+        left:0px;
+        bottom:0px;
+        overflow:hidden;
+        width:calc( 100% );
+        margin:0;
+        padding:0;
+        opacity: .999;
+        height:calc(100vh + 35px);
+        
+        background-color:#adb1b6f8;
+     
+       
+        .tag{
+            background-color: white;
+            position:absolute;;
+            width:250px;
+            max-width:calc(100% - 80px) !important;
+            justify-self:center;
+            //height:100px;
+            min-height: 130px;
+            padding:10px;
+            padding-bottom:20px;
+            z-index: 99;
+            margin:0px 30px;
+            transform: translateY(70px) translateX(-7px);
+            border-radius: 20px;
+            opacity:1 ;
+            animation: show .2s ease-in 1;
+            @keyframes show {
+                from {
+                    transform: translateY(-360px);
+                }
+                to{
+                     transform:  translateY(-70px);
+                }
+            }
+            .tag__cancel{
+                position:absolute;
+                right:10px;
+                cursor:pointer;
+            }
+            h4{
+                color:black;
+                margin-top:0px;
+                font-weight: 700;
+                text-align: center;
+                font-size: 16px;
+            }
+            p{
+                color:red;
+                text-align: center;
+                font-size: 13px;
+                margin-top:20px;
+                font-weight: 600;
+            }
+            .proceed{
+                background-color: rgb(230, 51, 51);
+                color:#fff;
+            }
+            .storeandsocial{
+                background-color: #301a96;
+                color:#fff;
+            }
+            input{
+                padding:13px;
+                width:calc(100% - 26px);
+                margin:auto;
+                margin-top:10px;
+                outline:none;
+                border-radius:10px;
+                border:none;
+                background-color: #f5f5f5;
+            }
+            button{
+                background-color: #f5f5f5;
+                //#f5f5f5
+                color:#81848d;
+                padding: 13px;
+                border:none;
+                border-radius: 10px;
+                margin:auto;
+                display:block;
+                width:100%;
+                margin-top:10px;
+                &:hover{
+                    background-color: #301a96;
+                    color:#fff;
+                    transition: .2s;
+                }
+            }
+            .proceed:hover {
+                background-color: rgb(207, 38, 38);
+            } 
+            .cancel:hover{
+                background-color:  #dddddd;
+                color:#81848d;
+                //#8272ca
+            }
+            .mechanic__details{
+                display:flex;
+                justify-content:space-between;
+                padding:10px 0px;
+                h3{
+                    font-size:14px;
+                    font-weight:600;
+                    margin:0;
+                }
+                p{
+                    color:black;
+                    margin:0;
+                    font-weight:500;
+                    font-size:12px;
+                    padding:0;
+                    display:flex;
+                    span{
+                        margin-top:02px;
+                    }
+                }
+            }
+           
+            .pro , .rating , .ref{
+                display:flex;
+                justify-content:space-between;
+                padding:5px 0px;
+                
+                h3{
+                    font-size:14px;
+                    font-weight:600;
+                    margin:0;
+                }
+                p{
+                    color:0;
+                    padding:0;
+                }
+
+            }
+           
+            .reverse{
+                transition:.4s;
+                transform:rotate(180deg)
+            }
+            .pro{
+                margin-top:30px;
+            }
+            .mechanic__rates{
+                 margin:0;
+                 display:none;
+                 transition:2s;
+                 margin:15px 0px;
+                div{
+                    display:flex;
+                    justify-content:space-between;
+                    margin:0;
+                    margin-top:10px;
+                    h3{
+                          font-size:12px;
+                          font-weight:500;
+                          margin:0;
+                    }
+                    p{
+                        color:black;
+                        margin:0;
+                        display:flex;
+                         font-size:12px;
+                        span{
+                            margin-top:1px;
+                        }
+                    }
+                }
+            }
+              .profile{
+                 margin:0;
+                 display:none;
+                 transition:2s;
+                 margin:15px 0px;
+                div{
+                    display:flex;
+                    justify-content:space-between;
+                    margin:0;
+                    margin-top:10px;
+                    h3{
+                          font-size:12px;
+                          font-weight:600;
+                          margin:0;
+                    }
+                    p{
+                        color:black;
+                        margin:0;
+                        display:flex;
+                        font-weight:400;
+                         font-size:12px;
+                        span{
+                            margin-top:2px;
+                        }
+                    }
+                }
+            } 
+             .references{
+                display:none;
+                margin:15px 0px;
+               p{
+                font-size:12px;
+                font-weight:500;
+                margin:0;
+                margin-top:10px;
+                color:black ;
+                text-align:left;
+               }
+            } 
+            .open{
+                display:block;
+                transition:2s;
+            }
+        }
+    } 
+   
+  
     
+}
+
+.fit_height{
+    height:10000vh !important;
+    overflow:hidden;
 }

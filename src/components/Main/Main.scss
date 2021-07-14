@@ -2,8 +2,8 @@
     position: relative;
     width:100%;
     overflow-x: hidden;
-    max-width:350px;
     height:100vh;
+    max-width:700px;
     margin:0;
     margin:auto;
     padding:0px;
@@ -17,6 +17,31 @@
      margin:0;
      overflow-x: hidden;
     }
+    // @media(min-width:600px){
+    //   padding-right:200px;
+    //   padding-left:200px;
+    // }
     /** #492f70 #f9f9f9 #282828 #9684ad #e3dfe8 */
   
 }
+
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #bbb9b9;
+    border-radius:6px;
+    
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #bbb9b9;
+  }

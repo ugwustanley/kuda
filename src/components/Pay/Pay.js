@@ -1,5 +1,6 @@
 import React,{useState , useEffect} from 'react'
 import {useHistory , Link} from 'react-router-dom'
+import Draggable, {DraggableCore} from 'react-draggable';
 import queryString from 'query-string'
 import {CaretLeft} from 'phosphor-react'
 import './Pay.scss'
@@ -47,6 +48,58 @@ const Pay = ({ location }) => {
                   <input disabled name="amount" value={acc} onChange={(e) => setAcc(e.target.value)} type="tel" defaultValue="" id="amount" className={isfilled === false ? `fail amount` :` amount` }  />
                 :
                 <input name="amount" value={acc} onChange={(e) => setAcc(e.target.value)} type="tel" defaultValue="" id="amount" className={isfilled === false ? `fail amount` :` amount` }  />}
+                <label for="draggable">Payment Order (drag to rearrange)</label>
+                <div className="draggable">
+                    <Draggable
+                        axis="y"
+                        handle=".handle"
+                        defaultPosition={{x: 0, y: 0}}
+                        position={null}
+                        grid={[2, 2]}
+                        scale={1.2}
+                        bounds="parent"
+                        onStart={(e) => console.log("started")}
+                        onDrag={(e) => console.log("dragged" )}
+                        onStop={(e) => console.log("stopped" , e)}
+                        >
+                       <div className="handle">Wallet</div>
+                        
+                    </Draggable>
+
+                    <Draggable
+                        axis="y"
+                        handle=".handle"
+                        defaultPosition={{x: 0, y: 0}}
+                        position={null}
+                        grid={[2, 2]}
+                        scale={1.2}
+                        bounds="parent"
+                        onStart={() => console.log("started")}
+                        onDrag={() => console.log("dragged")}
+                        onStop={() => console.log("stopped")}
+                        >
+                        <div className="handle">Pay later</div>
+                        
+                    </Draggable>
+
+                    <Draggable
+                        axis="y"
+                        handle=".handle"
+                        defaultPosition={{x: 0, y: 0}}
+                        position={null}
+                        grid={[2, 2]}
+                        scale={1.2}
+                        bounds="parent"
+                        onStart={() => console.log("started")}
+                        onDrag={() => console.log("dragged")}
+                        onStop={() => console.log("stopped")}
+                        >
+                       
+                            <div className="handle">Bank</div>
+                        
+                        
+                    </Draggable>
+                </div>
 
                  <input onClick={ (e) => handleValidation(e)}name="save" type="submit" value="Send" id="save" className="save"/>
             </form>

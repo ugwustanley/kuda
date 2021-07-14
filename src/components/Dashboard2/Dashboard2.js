@@ -28,7 +28,7 @@ const Dashboard2 = () => {
                  </div>
                 <h5>Dashboard2</h5>
           </div>
-
+          <div className="Dashboard2_main">
           <div className="tabs">
                   <p className={manage === true ? `manage active-tab`: `manage`} onClick={() => setManage(true)}>Manage catalogues</p>
                 <Link><p className={manage === true ? `create`: `create active-tab`} onClick={() =>setManage(false)}>Create Offer</p> </Link> 
@@ -77,7 +77,7 @@ const Dashboard2 = () => {
         
   
 
-         
+          </div>
         </div>
     )
 }

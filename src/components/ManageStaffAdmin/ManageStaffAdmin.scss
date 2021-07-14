@@ -1,0 +1,96 @@
+.manage_staff_admin{
+    display:grid;
+    padding:20px;
+    grid-template-columns:4fr 6fr;
+    margin:20px;
+    margin-top:0px;
+    margin-left:0px;
+    margin-right:0px;
+    //  grid-gap:20px;
+    .manage_staff_info{
+        width:calc(100% - 40px);
+        background:#fff;
+        display:grid;
+        grid-column: 2/3;
+        padding:20px;
+        border-radius:5px;
+        .row{
+            display:grid;
+            grid-template-columns:3fr 3fr 3fr 1fr;
+          // display:flex;
+          // justify-content: space-between;
+            h3{
+                font-weight: 600;
+            }
+            p{
+                font-weight: 500;
+                cursor:pointer;
+            }
+            button{
+                width:80px;
+                height:30px;
+                outline:none;
+                background:tomato;
+                color:#fff;
+                border:None;
+                border-radius:5px;
+                float:right;
+                margin-top:10px;
+                cursor:pointer;
+            }
+        }
+       
+    }
+    .payroll_account{
+            // display:grid;
+            // grid-column:1/2;
+            margin:0;
+            margin-right:20px;
+            width:calc(100% - 20px);
+            height:100%;
+            padding:0px 0px;
+            background-color:#fff;
+            border-radius: 5px;
+        
+          //  padding-top:10px;
+            // margin-left:10px;
+            // margin-top:-45px;
+            // margin-bottom:30px;
+
+        .payroll_details::nth-child(1){
+            margin-top:0px;
+        }
+        .payroll_detailss{
+            display:flex;
+            justify-content:space-between;
+          
+            border-radius: 5px;
+            padding:20px 20px;
+            height:0;
+            
+            margin-top:30px;
+            padding-bottom:0px;
+            
+            
+           // padding:20px;
+            h4{
+                
+                font-size: 16px;
+                margin:0 !important ;
+                padding:0 !important ;
+           
+            }
+            p{
+              
+                font-size: 16px;
+                margin:0 !important ;
+                padding:0 !important ;
+                font-weight:600;
+              
+            }
+    
+           
+        }
+    }
+
+}
