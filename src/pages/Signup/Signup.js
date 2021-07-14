@@ -6,11 +6,13 @@ const Signup = () => {
     const [show , setShow] = useState(false)
     const [ email , setEmail] = useState("")
     const [pass , setPass] = useState("")
-    const [name , setName] = useState("")
+    const [firstName , setFirstName] = useState("")
+    const [lastName , setLastName] = useState("")
+    const [username , setUsername] = useState("")
     const [ isfilled , setIsfilled] = useState(true)
 
     const handleValidation = (e) =>{
-      if(pass === "" || email === "" || name === "" ) {
+      if(pass === "" || email === "" || lastName === "" || firstName === "" || username === "") {
         e.preventDefault() 
         setIsfilled(false)
       } else{
@@ -31,8 +33,15 @@ const Signup = () => {
 <h2>Sign Up</h2>
 <p>Please fill this form to create an account</p>
 <form onSubmit={(e) => handleSubmit(e) } className="form">
-    <label for="name">Name</label>
-    <input type="text" onChange={(e) => setName(e.target.value)} name="name" id="name" className={isfilled === false ? `fail name` :`name` } />
+    <label for="name">First Name</label>
+    <input type="text" onChange={(e) => setFirstName(e.target.value)} name="name" id="name" className={isfilled === false ? `fail name` :`name` } />
+   
+    <label for="name">Last Name</label>
+    <input type="text" onChange={(e) => setLastName(e.target.value)} name="name" id="name" className={isfilled === false ? `fail name` :`name` } />
+   
+    <label for="name">Username</label>
+    <input type="text" onChange={(e) => setUsername(e.target.value)} name="name" id="name" className={isfilled === false ? `fail name` :`name` } />
+
     <label for="email">Email address</label>
     <input type="email" onChange={(e) => setEmail(e.target.value)} name="email" id="email" className={isfilled === false ? `fail email` :`email` } />
     <label for="password">Password</label>
