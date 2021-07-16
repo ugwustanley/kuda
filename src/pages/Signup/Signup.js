@@ -6,8 +6,12 @@ import './Signup.scss'
 
 const Signup = () => {
 
-
+    
     const [show , setShow] = useState(false)
+
+    const [err , setErr] = useState()
+
+    const [btnvalue , setBtnvalue] = useState("Sign up")
   
     const [ email , setEmail] = useState()
     
@@ -43,14 +47,26 @@ const Signup = () => {
             const headers = {"content-type":"application/json"}
   
             const result = await fetch(url, { method:"post",body:JSON.stringify(payload),headers }).then(e=>e.json());
+            
+            console.log(result)
+           // alert(result.message);
+
+            setErr(result.message)
+            setBtnvalue("Sign up")
+            if(result.err){
+              setErr(result.message)
+            }
+            else{
+                history.push("/login")
+            }
   
-            alert(result.message);
-  
-            history.push("/login");
+         //   history.push("/login");
 
           } catch (error) {
-
-            alert("Error occurred creating account, check your internet connection and try again");
+            setBtnvalue("Sign up")
+          //  setErr(error.message)
+          //  if(error.message == "Failed to fetch") setErr("An error occurred, check your internet connection and try again")
+           // alert("Error occurred creating account, check your internet connection and try again");
 
           }
     }
@@ -66,7 +82,7 @@ const Signup = () => {
        } 
 
       else{
-
+        setBtnvalue("Please wait..")
          onSignup()
 
       }
@@ -75,10 +91,10 @@ const Signup = () => {
     
     const handleSubmit = (e) =>{
 
-        setShow(true)
+      //  setShow(true)
 
         e.preventDefault()
-        
+
     }
 
     return (
@@ -90,7 +106,7 @@ const Signup = () => {
 <h2>Sign Up</h2>
 
 <p>Please fill this form to create an account</p>
-
+<p style={{color:"red"}}>{err}</p>
 <form onSubmit={(e) => handleSubmit(e) } className="form">
 
     <label for="name">First Name</label>
@@ -117,7 +133,7 @@ const Signup = () => {
   
     <input type="password" onChange={(e) => setPass(e.target.value)} name="" id="password" className={isfilled === false ? `fail password` :`password` } />
   
-    <input onClick={ (e) => handleValidation(e)}  name="Submit" value="Sign Up" type="submit" id="submit" className="submit" />
+    <input onClick={ (e) => handleValidation(e)}  name="Submit" value={btnvalue} type="submit" id="submit" className="submit" />
 
 </form>
 
@@ -133,11 +149,11 @@ const Signup = () => {
  
     <input type="text" name="tag__name" className="tag__name" id="tag_name" />
  
-    <Link to="/">
+   
  
     <input type="submit" name="create__tag" className="create__tag" value="Create" />
  
-    </Link>
+   
  
  </div>
  
