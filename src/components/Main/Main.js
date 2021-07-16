@@ -1,5 +1,9 @@
 import React from 'react'
 import {Link , BrowserRouter as Router  , Route , useHistory} from 'react-router-dom'
+
+import Authentication from '../../routes/authentication'
+import Guard from '../../routes/Gaurd'
+
 import Payments from '../Payments/Payments'
 import Budget from '../Budget/Budget'
 import Addbank from '../Addbank/Addbank'
@@ -72,8 +76,11 @@ const Main = () => {
     return (
         <div className="main">
           
+                <Authentication />
 
+            <Guard>
                 <Route exact path='/'  component={Home} />
+          
                 <Route exact path='/payments'  component={Payments} />
                 <Route exact path='/budget'  component={Budget} />
                 <Route exact path='/SwitchOrg'  component={SwitchOrg} />
@@ -137,7 +144,7 @@ const Main = () => {
                  <Route exact path="/pay" component={Pay} />
                 <Route exact path="/shop" component={Shop} />
                 <Route exact path={['/' , '/payments', '/budget', '/card' , '/more', '/setting' , '/account']} component={Menu} />
-               
+              </Guard> 
            
             
         </div>
