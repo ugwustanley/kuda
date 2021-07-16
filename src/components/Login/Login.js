@@ -30,7 +30,14 @@ const Login = () => {
         const result = await fetch(url, { method:"post",body:JSON.stringify(payload),headers }).then(e=>e.json());
 
         console.log(result)
+        setErr(result.message)
         setBtnvalue("Login")
+        if(result.statusCode === 401){
+          setErr("Invalid email address or password")
+        }
+        // else{
+        //   setErr("An error occurred, check your internet connection and try again")
+        // }
         //alert(result.message);
         
         localStorage.setItem("token",result.data.token)
@@ -40,7 +47,10 @@ const Login = () => {
 
       } catch (error) {
         setBtnvalue("Login")
-        setErr("An error occurred")
+        console.log(error , "eoi")
+        
+        if(error.message == "Failed to fetch") setErr("An error occurred, check your internet connection and try again")
+        
        // alert("Error occurred, check your internet connection and try again");
       }
     }
@@ -60,7 +70,7 @@ const Login = () => {
         <div className="login">
         <h2>Login</h2>
         <p>Please fill this form to log into your account</p>
-        <p style={{color:"red"}}>{err}</p>
+        <p className="err" style={{color:"red"}}>{err}</p>
         <form onSubmit={(e) => e.preventDefault() } className="form">
             <label for="email">Email address</label>
             <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" className={isfilled === false ? `fail email` :`email` }  />
