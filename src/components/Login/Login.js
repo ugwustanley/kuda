@@ -25,7 +25,7 @@ const Login = () => {
           password: pass
         };
 
-        const headers = {"content-type":"application/json"}
+        const headers = {"content-type":"application/json", "Access-Control-Allow-Origin":"*"}
 
         const result = await fetch(url, { method:"post",body:JSON.stringify(payload),headers }).then(e=>e.json());
 

@@ -47,10 +47,10 @@ import Expense from '../Expense/Expense'
 import Payroll2 from '../Payroll2/Payroll2'
 import Menu from '../Menu/Menu'
 import Payroll from '../Payroll/Payroll'
-import Login from '../Login/Login'
+
 import Recurr from '../Recurr/Recurr'
 import Transaction from '../../pages/Transaction/Transaction'
-import Signup from "../../pages/Signup/Signup"
+
 import ShopDetails3 from '../ShopDetails3/ShopDetails3'
 import Admin from '../Admin/Admin'
 import Adminorg from '../Adminorg/Adminorg'
@@ -100,7 +100,7 @@ const Main = () => {
                 <Route exact path="/productdetail2" component={ProductDetail2} />
                 <Route exact path="/rate" component={Rate} />
                 <Route exact path="/transactionDetail" component={TransactionDetail} />
-                <Route exact path='/login' component={Login} />
+                {/* <Route exact path='/login' component={Login} /> */}
                 <Route exact path='/addvehicle2' component={AddVehicle2} />
                 <Route exact path='/routine' component={Routine} />
                 <Route exact path='/expense' component={Expense} />
@@ -113,7 +113,7 @@ const Main = () => {
                 <Route exact path='/shopdetailsthree' component={ShopDetails3} />
                 {/* <Route exact path='/dashboard' component={Dashboard} /> */}
                 {/* <Route exact path='/dashboard2' component={Dashboard2} /> */}
-                <Route exact path='/signup' component={Signup} />
+                {/* <Route exact path='/signup' component={Signup} /> */}
                 <Route exact path='/categorytwo' component={CategoryTwo} />
                 <Route exact path='/setting' component={Settings} />
                 <Route exact path='/transaction' component={Transaction} />
