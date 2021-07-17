@@ -1,4 +1,4 @@
-import React , { useState} from 'react'
+import React , { useState , useEffect} from 'react'
 import './Settings.scss'
 import {useHistory} from 'react-router-dom'
 import {CaretLeft} from 'phosphor-react'
@@ -8,21 +8,35 @@ import {CaretLeft} from 'phosphor-react'
 //<h2>Profile setting</h2>
 const Settings = () => {
     let history = useHistory()
-    const [ email , setEmail] = useState("ugwustanley@gmail.com")
-    const [phone , setPhone] = useState("08000000000")
-    const [fname , setFname] = useState("ugwu")
-    const [lname , setLname] = useState("stanley")
-    const [key , setKey] = useState("stanlee")
+    const [ email , setEmail] = useState()
+    const [phone , setPhone] = useState()
+    const [fname , setFname] = useState()
+    const [lname , setLname] = useState()
+    const [key , setKey] = useState()
     const [isfilled , setIsfilled] = useState(true)
 
     const handleValidation = (e) =>{
-      if(phone === "" || email === "" || fname === "" || lname === "" || key === "" ) {
+      if( !phone || !email || !fname || !lname || !key  ) {
         e.preventDefault() 
         setIsfilled(false)
       } else{
           setIsfilled(true)
       }
     }
+    const user = JSON.parse(localStorage.getItem("user"))
+    //console.log(user)
+        useEffect(() => {
+            
+            if(user){
+                console.log(user , "jijijijijijijij")
+               setFname(user.lastName)
+               setLname(user.firstName)
+               setPhone(user.phone)
+               setKey(user.username)
+               setEmail(user.email)
+            } 
+            
+        }, [user.password, user.email])
     return (
         <div className="setting">
             <div className="setting__heading">

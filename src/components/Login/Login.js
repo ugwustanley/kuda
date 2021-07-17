@@ -42,6 +42,7 @@ const Login = () => {
         
         localStorage.setItem("token",result.data.token)
         localStorage.setItem("user",JSON.stringify(result.data))
+        
 
         history.push("/");
 

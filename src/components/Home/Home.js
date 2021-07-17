@@ -1,4 +1,4 @@
-import React from 'react'
+import React , {useEffect , useState} from 'react'
 import Stanley from './images/stanley.jpg'
 import Status from './images/20210322_54722.jpg'
 import Cart from './images/20210322_104712.jpg'
@@ -13,6 +13,22 @@ import './Home.scss'
 // <h4 className="intro__message">Hi, stanley </h4>
 
 const Home = () => {
+     const [fname , setFname] = useState()
+     const [lname , setLname] = useState()
+     const [username , setUsername] = useState()
+    const user = JSON.parse(localStorage.getItem("user"))
+    //console.log(user)
+        useEffect(() => {
+            
+            if(user){
+                console.log(user , "jijijijijijijij")
+                setFname(user.firstName)
+                setLname(user.lastName)
+                setUsername(user.username)
+            } 
+            
+        }, [user.password, user.email])
+
     return (
         <div className="home">
             <div className="intro">
@@ -20,9 +36,10 @@ const Home = () => {
                    <img className="profile" src={Stanley} alt="profile_image"></img>
                    <div className="intro__message">
                        <Link to="/setting">
-                       <div><h4>Hi, Kwado Nzeh</h4> <img className="status" src={Status} alt="status"></img></div>
+                       <div><h4>Hi, {fname} {lname}</h4> <img className="status" src={Status} alt="status"></img></div>
                        </Link>
-                       <h6>@Nzeh1</h6>
+                       <h6>@{username}</h6>
+                       {/* @Nzeh1  Kwado Nzeh*/}
                    </div>
                     <div className="add__money" >
                        <Link to="/notification">

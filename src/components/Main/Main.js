@@ -78,7 +78,7 @@ const Main = () => {
           
                 <Authentication />
 
-            
+            <Guard>
                 <Route exact path='/'  component={Home} />
           
                 <Route exact path='/payments'  component={Payments} />
@@ -144,7 +144,7 @@ const Main = () => {
                  <Route exact path="/pay" component={Pay} />
                 <Route exact path="/shop" component={Shop} />
                 <Route exact path={['/' , '/payments', '/budget', '/card' , '/more', '/setting' , '/account']} component={Menu} />
-            
+            </Guard>
            
             
         </div>
