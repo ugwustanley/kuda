@@ -1,17 +1,32 @@
-import React from 'react'
+import React , {useState , useEffect } from 'react'
 import Photo from './images/stanley.jpg'
 import {Link} from 'react-router-dom'
 import {CaretRight} from 'phosphor-react'
 import './Account.scss'
 
 const Account = () => {
+    const [fname , setFname] = useState()
+    const [lname , setLname] = useState()
+    const [username, setUsername] = useState()
+    const user = JSON.parse(localStorage.getItem("user"))
+    //console.log(user)
+        useEffect(() => {
+            
+            if(user){
+                console.log(user , "jijijijijijijij")
+               setFname(user.lastname)
+               setLname(user.firstname)
+               setUsername(user.username)
+            } 
+            
+        }, [user.password, user.email])
     return (
         <div className="account">
             <div className="account__info">
 
             <img src={Photo}></img>
-            <h3 className="name">Kwado Nzeh</h3>
-            <p className="tag">@Nzeh1</p>
+            <h3 className="name">{fname} {lname}</h3>
+            <p className="tag">@{username}</p>
             </div>
           
            <div className="general group">
