@@ -1,10 +1,12 @@
 import React , {useState , useEffect } from 'react'
 import Photo from './images/stanley.jpg'
-import {Link} from 'react-router-dom'
+import {Link , useHistory} from 'react-router-dom'
 import {CaretRight} from 'phosphor-react'
 import './Account.scss'
 
 const Account = () => {
+
+    const history = useHistory()
     const [fname , setFname] = useState()
     const [lname , setLname] = useState()
     const [username, setUsername] = useState()
@@ -20,6 +22,11 @@ const Account = () => {
             } 
             
         }, [user.password, user.email])
+    function logout (){
+        localStorage.removeItem("token")
+        localStorage.removeItem("user")
+        history.push("/login")
+    }
     return (
         <div className="account">
             <div className="account__info">
@@ -148,8 +155,8 @@ const Account = () => {
                     </div>
                    
                
-                    <p>Logout</p>
-                    <div className="arrow-right">
+                    <p onClick={logout}>Logout</p>
+                    <div onClick={logout} className="arrow-right">
                        <CaretRight size={20} weight="bold" />
                     </div>
                    
