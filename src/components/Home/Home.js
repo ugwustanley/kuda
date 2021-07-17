@@ -22,8 +22,8 @@ const Home = () => {
             
             if(user){
                 console.log(user , "jijijijijijijij")
-                setFname(user.firstName)
-                setLname(user.lastName)
+                setFname(user.firstname)
+                setLname(user.lastname)
                 setUsername(user.username)
             } 
             

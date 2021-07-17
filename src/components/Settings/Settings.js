@@ -29,8 +29,8 @@ const Settings = () => {
             
             if(user){
                 console.log(user , "jijijijijijijij")
-               setFname(user.lastName)
-               setLname(user.firstName)
+               setFname(user.lastname)
+               setLname(user.firstname)
                setPhone(user.phone)
                setKey(user.username)
                setEmail(user.email)
