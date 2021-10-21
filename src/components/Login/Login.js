@@ -1,6 +1,9 @@
 import React, {useState} from 'react'
 import {Link , useHistory} from 'react-router-dom'
+import Authrocket from 'useauthrocket'
+import dotenv from 'dotenv'
 import './Login.scss'
+dotenv.config()
 
 const Login = () => {
 
@@ -18,30 +21,42 @@ const Login = () => {
 
     async function onLogin(){
       try {
-        const url = "https://randmob-api.herokuapp.com/v1/login";
 
-        const payload = {
-          email,
-          password: pass
-        };
+        const app = await Authrocket.initializeApp({
+          apiKey:process.env.REACT_APP_API_KEY,
+          appName:process.env.REACT_APP_APP_NAME
+        })
+        const user = await app.login(email, pass)
 
-        const headers = {"content-type":"application/json", "Access-Control-Allow-Origin":"*"}
-
-        const result = await fetch(url, { method:"post",body:JSON.stringify(payload),headers }).then(e=>e.json());
-
-        console.log(result)
-        setErr(result.message)
-        setBtnvalue("Login")
-        if(result.statusCode === 401){
-          setErr("Invalid email address or password")
+        if(user){
+          localStorage.setItem("user", JSON.stringify(user.payload))
+          setBtnvalue("Sign up")
+          history.push("/login");
         }
+        // const url = "https://randmob-api.herokuapp.com/v1/login";
+
+        // const payload = {
+        //   email,
+        //   password: pass
+        // };
+
+        // const headers = {"content-type":"application/json", "Access-Control-Allow-Origin":"*"}
+
+        // const result = await fetch(url, { method:"post",body:JSON.stringify(payload),headers }).then(e=>e.json());
+
+        // console.log(result)
+        // setErr(result.message)
+        // setBtnvalue("Login")
+        // if(result.statusCode === 401){
+        //   setErr("Invalid email address or password")
+        // }
         // else{
         //   setErr("An error occurred, check your internet connection and try again")
         // }
         //alert(result.message);
         
-        localStorage.setItem("token",result.data.token)
-        localStorage.setItem("user",JSON.stringify(result.data))
+        // localStorage.setItem("token",result.data.token)
+        // localStorage.setItem("user",JSON.stringify(result.data))
         
 
         history.push("/");
@@ -49,7 +64,7 @@ const Login = () => {
       } catch (error) {
         setBtnvalue("Login")
         console.log(error , "eoi")
-        
+        setErr(error.message)
         if(error.message == "Failed to fetch") setErr("An error occurred, check your internet connection and try again")
         
        // alert("Error occurred, check your internet connection and try again");

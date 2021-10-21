@@ -1,8 +1,11 @@
 import React , {useState} from 'react'
-
+import Authrocket from 'useauthrocket'
 import {Link , useHistory} from 'react-router-dom'
-
 import './Signup.scss'
+import dotenv from 'dotenv'
+dotenv.config()
+
+
 
 const Signup = () => {
 
@@ -33,38 +36,55 @@ const Signup = () => {
 
 
         try {
-            const url = "https://randmob-api.herokuapp.com/v1/register";
-
             const payload = {
                 firstname: firstName,
                 lastname : lastName,
                 username : username,
-                password : pass,
-                email    : email,
+                email    :  email,
                 phone    : phone
             }
-  
-            const headers = {"content-type":"application/json" , "Access-Control-Allow-Origin":"*"}
-  
-            const result = await fetch(url, { method:"post",body:JSON.stringify(payload),headers }).then(e=>e.json());
-            
-            console.log(result)
-           // alert(result.message);
+          const app = Authrocket.initializeApp({
+            apiKey:process.env.REACT_APP_API_KEY,
+            appName:process.env.REACT_APP_APP_NAME
+          })
+          const user = app.createAccount(email, pass, payload)
 
-            setErr(result.message)
+          if(user){
             setBtnvalue("Sign up")
-            if(result.err){
-              setErr(result.message)
-            }
-            else{
-                history.push("/login")
-            }
+            history.push("/login");
+          }
+          //   const url = "https://randmob-api.herokuapp.com/v1/register";
+
+          //   const payload = {
+          //       firstname: firstName,
+          //       lastname : lastName,
+          //       username : username,
+          //       password : pass,
+          //       email    : email,
+          //       phone    : phone
+          //   }
+  
+          //   const headers = {"content-type":"application/json" , "Access-Control-Allow-Origin":"*"}
+  
+          //   const result = await fetch(url, { method:"post",body:JSON.stringify(payload),headers }).then(e=>e.json());
+            
+          //   console.log(result)
+          //  // alert(result.message);
+
+          //   setErr(result.message)
+          //   setBtnvalue("Sign up")
+          //   if(result.err){
+          //     setErr(result.message)
+          //   }
+          //   else{
+          //       history.push("/login")
+          //   }
   
          //   history.push("/login");
 
           } catch (error) {
             setBtnvalue("Sign up")
-          //  setErr(error.message)
+            setErr(error.message)
           //  if(error.message == "Failed to fetch") setErr("An error occurred, check your internet connection and try again")
            // alert("Error occurred creating account, check your internet connection and try again");
 
@@ -75,13 +95,13 @@ const Signup = () => {
 
     if(!pass|| !email || !lastName  || !firstName || !username) {
 
-    e.preventDefault() 
+        e.preventDefault() 
 
-      setIsfilled(false)
+        setIsfilled(false)
 
-       } 
+     } 
 
-      else{
+    else{
         setBtnvalue("Please wait..")
          onSignup()
 
